@@ -1,10 +1,12 @@
 # Agentic Scrum
 
-**Scrum optimized for AI agents** — A framework where AI takes on Scrum roles (Developer, Product Owner, Scrum Master) to autonomously deliver software increments.
+**Scrum optimized for AI agents** for stable autonomous software development.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Getting Started
+
+Optional dependencies: deno
 
 ### For Claude Code Users
 
@@ -22,7 +24,15 @@
 
 ## Why Agentic Scrum?
 
-Traditional Scrum assumes human limitations: time-boxed sprints, velocity estimation, and synchronous ceremonies. AI agents don't have these constraints.
+Stable autonomous software development requires a structured process:
+
+* **Incremental decomposition** — Break problems down vertically (end-to-end slices) then horizontally (layers) for reliable resolution
+* **Continuous quality inspection** — Verify completed functionality meets standards
+* **Adaptive prompting** — Evolve instructions based on what works
+
+Scrum provides exactly this structure, and AI agents understand it well.
+
+**Why adapt Scrum?** Traditional Scrum assumes human limitations: time-boxed sprints, sprint point estimation, and synchronous ceremonies. AI agents don't have these constraints.
 
 **Agentic Scrum adapts the framework:**
 
