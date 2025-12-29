@@ -1,10 +1,10 @@
-# Agentic Scrum
+# 🤖 Agentic Scrum
 
 **Scrum optimized for AI agents** for stable autonomous software development.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Getting Started
+## 🚀 Getting Started
 
 Optional dependencies: deno
 
@@ -13,7 +13,7 @@ Optional dependencies: deno
 1. Use following prompts in Claude Code to add and install the plugin:
 
     ```
-    /plugin marketplace add https://github.com/atusy/agentic-scrum 
+    /plugin marketplace add https://github.com/atusy/agentic-scrum
     ```
 
     ```
@@ -22,13 +22,13 @@ Optional dependencies: deno
 2. Run `/scrum:init` in your project to create `scrum.ts`
 3. Run `/scrum:go` to start autonomous development
 
-## Why Agentic Scrum?
+## 💡 Why Agentic Scrum?
 
 Stable autonomous software development requires a structured process:
 
-* **Incremental decomposition** — Break problems down vertically (end-to-end slices) then horizontally (layers) for reliable resolution
-* **Continuous quality inspection** — Verify completed functionality meets standards
-* **Adaptive prompting** — Evolve instructions based on what works
+* 🧩 **Incremental decomposition** — Break problems down vertically (end-to-end slices) then horizontally (layers) for reliable resolution
+* 🔍 **Continuous quality inspection** — Verify completed functionality meets standards
+* 🔄 **Adaptive prompting** — Evolve instructions based on what works
 
 Scrum provides exactly this structure, and AI agents understand it well.
 
@@ -38,16 +38,16 @@ Scrum provides exactly this structure, and AI agents understand it well.
 
 | Traditional Scrum | Agentic Scrum |
 |-------------------|---------------|
-| Sprint = 2-4 weeks | Sprint = 1 PBI (any duration) |
-| Velocity planning | No estimation needed |
-| Team ceremonies | Autonomous coordination |
-| Sprint backlog items | Single focused goal |
+| 📅 Sprint = 2-4 weeks | ⚡ Sprint = 1 PBI (any duration) |
+| 📊 Velocity planning | 🚫 No estimation needed |
+| 👥 Team ceremonies | 🤖 Autonomous coordination |
+| 📋 Sprint backlog items | 🎯 Single focused goal |
 
 The result: **continuous autonomous iteration** with all the benefits of Scrum's inspect-and-adapt loop.
 
-## Core Concepts
+## 🏗️ Core Concepts
 
-### Single Source of Truth: `scrum.ts`
+### 📄 Single Source of Truth: `scrum.ts`
 
 All Scrum artifacts live in one TypeScript file that AI agents read and write:
 
@@ -62,17 +62,17 @@ const scrum: ScrumDashboard = {
 };
 ```
 
-### AI Agent Roles
+### 🎭 AI Agent Roles
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     SCRUM MASTER                            │
+│                  🧭 SCRUM MASTER                            │
 │           Facilitates • Enforces • Removes Impediments      │
 └─────────────────────────────────────────────────────────────┘
         │                                       │
         ▼                                       ▼
 ┌───────────────────┐                 ┌───────────────────────┐
-│   PRODUCT OWNER   │                 │      DEVELOPER        │
+│  📋 PRODUCT OWNER │                 │    💻 DEVELOPER       │
 │                   │   ready PBI     │                       │
 │  • Product Goal   │ ───────────────▶│  • TDD Cycle          │
 │  • Backlog Order  │                 │  • RED → GREEN →      │
@@ -81,24 +81,24 @@ const scrum: ScrumDashboard = {
 └───────────────────┘                 └───────────────────────┘
 ```
 
-### Status Lifecycles
+### 🔄 Status Lifecycles
 
 ```
 PBI:      draft → refining → ready → done
 Sprint:   planning → in_progress → review → done
-Subtask:  pending → red → green → refactoring → completed
-                     │      │           │
-                  (test) (commit)   (commit×N)
+Subtask:  pending → 🔴 red → 🟢 green → 🔧 refactoring → ✅ completed
+                     │        │              │
+                  (test)  (commit)      (commit×N)
 ```
 
-## Key Principles
+## 📌 Key Principles
 
-- **1 Sprint = 1 PBI** — Maximize iteration speed
-- **Order = Priority** — Array position determines importance
-- **Git is History** — No timestamps in dashboard
-- **Behavioral ↔ Structural** — Separate commits for features vs refactoring
-- **Commits at GREEN only** — Never commit failing tests
+- ⚡ **1 Sprint = 1 PBI** — Maximize iteration speed
+- 📊 **Order = Priority** — Array position determines importance
+- 🗂️ **Git is History** — No timestamps in dashboard
+- 🔀 **Behavioral ↔ Structural** — Separate commits for features vs refactoring
+- ✅ **Commits at GREEN only** — Never commit failing tests
 
-## License
+## 📜 License
 
 MIT © 2025 atusy
