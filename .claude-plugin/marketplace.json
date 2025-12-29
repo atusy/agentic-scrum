@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "agentic-scrum",
-      "source": "./plugins/agentic-scrum",
+      "source": "./claude-plugins/agentic-scrum",
       "description": "A plugin that facilitates Agile Scrum project management"
     }
   ]
