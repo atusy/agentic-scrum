@@ -1,0 +1,13 @@
+{
+  "name": "agentic-scrum",
+  "owner": {
+    "name": "Atusy"
+  },
+  "plugins": [
+    {
+      "name": "agentic-scrum",
+      "source": "./plugins/agentic-scrum",
+      "description": "A plugin that facilitates Agile Scrum project management"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Agentic Scrum",
+  "hooks": {
+    "EventName": [
+      {
+        "matcher": "SessionStarted",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'test -f scrum.ts && echo 'Use `scrum-dashboard` skill and read @scrum.ts''"
+          }
+        ]
+      }
+    ]
+  }
+}
