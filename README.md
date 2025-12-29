@@ -20,7 +20,8 @@ Optional dependencies: deno
     /plugin install agentic-scrum@agentic-scrum
     ```
 2. Run `/scrum:init` in your project to create `scrum.ts`
-3. Run `/scrum:go` to start autonomous development
+3. Prompt Claude Code to add a TODO in `scrum.ts` (i.e., PBI)
+4. Run `/scrum:go` to start autonomous development
 
 ## 💡 Why Agentic Scrum?
 
