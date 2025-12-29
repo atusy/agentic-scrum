@@ -38,10 +38,10 @@ Coordinate with dedicated event agents for deep facilitation:
 
 | Event | Agent | Purpose |
 |-------|-------|---------|
-| Sprint Planning | `@scrum-event-sprint-planning` | Select top `ready` PBI, create subtasks |
-| Sprint Review | `@scrum-event-sprint-review` | Verify acceptance criteria, demo Increment |
-| Retrospective | `@scrum-event-sprint-retrospective` | Reflect and identify improvements |
-| Backlog Refinement | `@scrum-event-backlog-refinement` | Make PBIs ready for AI execution |
+| Sprint Planning | `@agentic-scrum:scrum:events:scrum-event-sprint-planning` | Select top `ready` PBI, create subtasks |
+| Sprint Review | `@agentic-scrum:scrum:events:scrum-event-sprint-review` | Verify acceptance criteria, demo Increment |
+| Retrospective | `@agentic-scrum:scrum:events:scrum-event-sprint-retrospective` | Reflect and identify improvements |
+| Backlog Refinement | `@agentic-scrum:scrum:events:scrum-event-backlog-refinement` | Make PBIs ready for AI execution |
 
 ## Impediment Resolution
 

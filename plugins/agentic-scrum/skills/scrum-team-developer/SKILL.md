@@ -63,7 +63,7 @@ Each subtask has `type`: `behavioral` (new functionality) or `structural` (refac
 2. Run all acceptance criteria verification commands
 3. Run Definition of Done checks
 4. Update `sprint.status` to `done`
-5. Notify @scrum-team-product-owner for acceptance
+5. Notify @agentic-scrum:scrum:team:scrum-team-product-owner for acceptance
 
 ## Collaboration
 

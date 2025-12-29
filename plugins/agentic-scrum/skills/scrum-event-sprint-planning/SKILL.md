@@ -77,8 +77,8 @@ Ask:
 
 ## Collaboration
 
-- **@scrum-team-product-owner**: Sprint Goal input, Product Backlog prioritization
-- **@scrum-team-developer**: Task breakdown, technical feasibility
-- **@scrum-team-scrum-master**: Facilitation, impediment removal
+- **@agentic-scrum:scrum:team:scrum-team-product-owner**: Sprint Goal input, Product Backlog prioritization
+- **@agentic-scrum:scrum:team:scrum-team-developer**: Task breakdown, technical feasibility
+- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, impediment removal
 
 A successful Sprint Planning produces shared understanding of WHY the Sprint matters, WHAT will be delivered, and HOW the team will achieve the Sprint Goal.

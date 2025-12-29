@@ -93,9 +93,9 @@ retrospectives:
 
 ## Collaboration
 
-- **@scrum-team-scrum-master**: Facilitation, safety concerns
-- **@scrum-team-product-owner**: Full participation (not optional!)
-- **@scrum-team-developer**: Honest participation, improvement ownership
-- **@scrum-event-backlog-refinement**: Outputs larger improvements as PBIs
+- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, safety concerns
+- **@agentic-scrum:scrum:team:scrum-team-product-owner**: Full participation (not optional!)
+- **@agentic-scrum:scrum:team:scrum-team-developer**: Honest participation, improvement ownership
+- **@agentic-scrum:scrum:events:scrum-event-backlog-refinement**: Outputs larger improvements as PBIs
 
 **NEVER skip, NEVER rush, NEVER blame.** The team should leave feeling heard, hopeful, and ready to improve.

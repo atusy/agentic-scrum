@@ -91,9 +91,9 @@ Guide discussion around:
 
 ## Collaboration
 
-- **@scrum-team-product-owner**: PBI completion status, acceptance decision
-- **@scrum-team-developer**: Demo preparation, DoD verification
-- **@scrum-team-scrum-master**: Facilitation, impediment identification
-- **@scrum-event-sprint-retrospective**: Outputs Review outcomes for reflection
+- **@agentic-scrum:scrum:team:scrum-team-product-owner**: PBI completion status, acceptance decision
+- **@agentic-scrum:scrum:team:scrum-team-developer**: Demo preparation, DoD verification
+- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, impediment identification
+- **@agentic-scrum:scrum:events:scrum-event-sprint-retrospective**: Outputs Review outcomes for reflection
 
 Sprint Review is a collaborative working session for inspecting the product and adapting based on feedback. Transparency is paramount - show only what is truly complete.

@@ -76,6 +76,6 @@ When items move up in priority, split to sprint-sized pieces. Don't refine every
 
 ## Collaboration
 
-- **@scrum-team-product-owner**: Product Goal alignment, value prioritization
-- **@scrum-team-developer**: Technical feasibility, effort estimation
-- **@scrum-team-scrum-master**: Definition of Ready enforcement
+- **@agentic-scrum:scrum:team:scrum-team-product-owner**: Product Goal alignment, value prioritization
+- **@agentic-scrum:scrum:team:scrum-team-developer**: Technical feasibility, effort estimation
+- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Definition of Ready enforcement
