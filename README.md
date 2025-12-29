@@ -1,8 +1,10 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+🚧WIP🚧 **This project is under active development.** Expect breaking changes.
+
 # 🤖 Agentic Scrum
 
 **Scrum optimized for AI agents** for stable autonomous software development.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 🚀 Getting Started
 
