@@ -34,6 +34,8 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 
 ### Refinement Sub-steps
 
+Iterate over up to 5 PBIs in `draft` or `refining` status and perform these steps:
+
 1. Inspect and adapt User Story format (see `user-story-format.md`)
 2. Split/merge PBIs to smallest value-delivering units (see `splitting.md`)
 3. Define acceptance criteria with executable verification commands
@@ -43,6 +45,8 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 7. Update status:
    - `ready` if passing the review and AI can fill all gaps
    - remain `refining` if human help is needed
+
+Low-priority PBIs can stay in `draft` or `refining` longer even without details; focus on high-priority items first.
 
 ## Definition of Ready
 
@@ -76,20 +80,6 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 | **Dependencies** | New blockers emerged? | Document and resolve |
 
 **If any check fails**: Change status back to `refining` and address gaps.
-
-## Backlog Granularity
-
-```
-┌─────────────────┐
-│  FINE-GRAINED   │  ← Ready for upcoming sprints (single PBI per sprint)
-├─────────────────┤
-│    MEDIUM       │  ← Next 2-3 sprints, may need splitting
-├─────────────────┤
-│ COARSE-GRAINED  │  ← Future items, Just-in-Time refinement
-└─────────────────┘
-```
-
-When items move up in priority, split to deliver smallest unit of user value. Don't refine everything upfront.
 
 ## Collaboration
 
