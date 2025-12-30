@@ -27,10 +27,33 @@ A PBI is `ready` when:
 |-----------|---------------------------|
 | **Independent** | Can reprioritize freely, **AND** no human dependencies |
 | **Negotiable** | Clear outcome, flexible implementation |
-| **Valuable** | User Story format makes value explicit |
+| **Valuable** | User Story format makes value explicit; **PBI must deliver user-facing benefit on its own** |
 | **Estimable** | All information needed is available |
 | **Small** | Smallest unit delivering user value |
 | **Testable** | Has **executable verification commands** |
+
+## Valid Increment Validation
+
+Before marking a PBI as `ready`, verify it produces a **meaningful increment**:
+
+| Check | Question | If No |
+|-------|----------|-------|
+| **User-Facing Value** | Does the `benefit` describe something a user/stakeholder can observe or use? | Merge with feature that delivers value |
+| **Demonstrable** | Can we show working software at Sprint Review? | Not an increment - merge or rewrite |
+| **Standalone Value** | Does it deliver value WITHOUT requiring another PBI first? | Merge with dependent PBI |
+
+**Invalid Increments** (merge with features):
+- Infrastructure setup (CI/CD, logging, monitoring)
+- Dependency additions
+- Database schema changes alone
+- API contracts without implementation
+- Refactoring without behavior change
+
+**Valid Increments**:
+- User can complete a specific workflow
+- Performance improvement with measurable user impact
+- Bug fix that restores expected behavior
+- Developer tooling with measurable productivity gain (if developers are stakeholders)
 
 ## Refinement Process
 
@@ -38,7 +61,8 @@ A PBI is `ready` when:
 2. **If AI Can Fill All Gaps** - Update status to `ready`
 3. **If Story Is Too Big** - Split into smaller stories (see `splitting.md`)
 4. **If Story Lacks Value Alone** - Merge with adjacent PBI (see `splitting.md` Anti-Patterns)
-5. **If Needs Human Help** - Keep as `refining`, document questions
+5. **If Only Infrastructure** - Merge with the feature it enables (see anti-pattern #7)
+6. **If Needs Human Help** - Keep as `refining`, document questions
 
 ## Adaptation Check for Ready PBIs
 

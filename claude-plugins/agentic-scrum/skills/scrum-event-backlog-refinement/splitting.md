@@ -92,7 +92,11 @@ These should be **merged** with adjacent PBIs:
 | Interface/type definition only | Implementation |
 | Tests only | Implementation (TDD: same subtask) |
 | Refactoring preparation only | The refactoring itself |
+| Infrastructure/tooling only | Feature it enables |
 
 **Judgment Criterion**: Can this PBI deliver `benefit` on its own?
 - ❌ "HTTP communication is possible" (just preparation)
+- ❌ "CI/CD pipeline is configured" (no user value alone)
+- ❌ "Database schema is created" (infrastructure only)
 - ✅ "Can fetch and display weather from API" (value delivered)
+- ✅ "Deployments complete in 15 minutes with zero manual steps" (measurable value)

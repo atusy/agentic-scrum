@@ -50,6 +50,8 @@ subtasks:
 - "Complete all Sprint Backlog items" (not a goal)
 - "Finish Stories A, B, and C" (output-focused)
 - Goals only developers understand
+- "Set up infrastructure for X" (no user value)
+- "Add dependencies for future feature" (preparation, not delivery)
 
 ## Readiness Verification
 
@@ -59,6 +61,16 @@ Before selecting a PBI, verify Definition of Ready:
 - [ ] Dependencies identified and resolved
 - [ ] No blocking questions remaining
 - [ ] Has executable verification commands
+- [ ] **Delivers user-facing increment** (not infrastructure-only)
+
+### Increment Gate
+
+**REJECT PBIs that only deliver** (return to refinement for merging):
+- Dependency libraries
+- Infrastructure/tooling (CI/CD, logging, monitoring)
+- Interface/type definitions
+- Database schema without usage
+- Refactoring preparation
 
 ## Subtask Guidelines
 

@@ -26,6 +26,7 @@ Focuses on verification:
 1. **Show the Increment above all else** - Working software, not slides
 2. **NEVER present incomplete work** - Creates false expectations
 3. **NEVER skip even with no completed Increment** - Discuss the situation
+4. **Infrastructure without user value is NOT an Increment** - If you can only show "we set up X", the sprint failed to deliver value
 
 ## Achievement vs. Activity
 
@@ -34,6 +35,8 @@ Focuses on verification:
 | "Users can now reset passwords" | "We worked on password reset" |
 | "API response time: 500ms → 100ms" | "We did performance work" |
 | "Mobile checkout is complete" | "Mobile checkout is 80% done" |
+| "User can view order history" | "Database schema is ready" |
+| "Deployments complete in 15 min" | "CI/CD pipeline configured" |
 
 ## Verification Process
 

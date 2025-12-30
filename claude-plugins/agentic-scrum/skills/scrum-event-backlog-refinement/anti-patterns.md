@@ -67,3 +67,23 @@ Complete items one by one to reduce WIP and ensure Sprint Goal achievement.
 ```
 
 Ask: What risk does login reduce? What value does it deliver? What feedback can we get?
+
+## 7. Infrastructure-Only Sprint
+**Bad**: PBI delivers only technical infrastructure without user-facing value
+
+```
+❌ "Set up CI/CD pipeline"
+❌ "Add logging infrastructure"
+❌ "Configure database"
+❌ "Add dependency libraries"
+✅ "Errors are automatically reported to the team (reduces MTTR by 50%)"
+✅ "User can view their order history" (requires database, but delivers value)
+```
+
+**Why it matters**: Technical work should be bundled with the feature it enables. A sprint without user-facing value:
+- Provides no feedback loop
+- Cannot be demonstrated at Sprint Review
+- Delays actual value delivery
+- Violates "Valuable" in INVEST
+
+**Solution**: Merge infrastructure work into the first feature that needs it. The infrastructure becomes a subtask, not a separate PBI.
