@@ -36,6 +36,7 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 ### Phase 3: Decide What to Do
 
+- Identify improvement actions (see `actions.md` for categories)
 - Select the **most helpful** changes (few, not all) and add them to `scrum.ts` following `format.md`
 - Techniques: Impact/Effort Matrix
 
