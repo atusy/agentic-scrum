@@ -72,13 +72,15 @@ Ask: What risk does login reduce? What value does it deliver? What feedback can 
 **Bad**: PBI delivers only technical infrastructure without user-facing value
 
 ```
-❌ "Set up CI/CD pipeline"
-❌ "Add logging infrastructure"
-❌ "Configure database"
-❌ "Add dependency libraries"
-✅ "Errors are automatically reported to the team (reduces MTTR by 50%)"
-✅ "User can view their order history" (requires database, but delivers value)
+❌ "As a developer, I want CI/CD pipeline set up, so that deployments are automated"
+❌ "As a developer, I want logging infrastructure, so that we can debug issues"
+❌ "As a developer, I want database configured, so that we can persist data"
+❌ "As a developer, I want HTTP client added, so that we can call external APIs"
+✅ "As a developer, I want errors reported automatically, so that I fix issues before users report them"
+✅ "As a user, I want to view my order history, so that I can track past purchases"
 ```
+
+The difference: valid stories have benefits that describe **observable outcomes**, not just **enabled capabilities**.
 
 **Why it matters**: Technical work should be bundled with the feature it enables. A sprint without user-facing value:
 - Provides no feedback loop

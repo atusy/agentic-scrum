@@ -43,17 +43,16 @@ Before marking a PBI as `ready`, verify it produces a **meaningful increment**:
 | **Standalone Value** | Does it deliver value WITHOUT requiring another PBI first? | Merge with dependent PBI |
 
 **Invalid Increments** (merge with features):
-- Infrastructure setup (CI/CD, logging, monitoring)
-- Dependency additions
-- Database schema changes alone
-- API contracts without implementation
-- Refactoring without behavior change
+- ❌ "As a developer, I want CI/CD configured, so that deployments are automated" → no user-facing benefit yet
+- ❌ "As a developer, I want HTTP client library added, so that we can make API calls" → just preparation
+- ❌ "As a developer, I want database schema created, so that we can store data" → infrastructure only
+- ❌ "As a developer, I want API types defined, so that we have contracts" → no implementation
 
 **Valid Increments**:
-- User can complete a specific workflow
-- Performance improvement with measurable user impact
-- Bug fix that restores expected behavior
-- Developer tooling with measurable productivity gain (if developers are stakeholders)
+- ✅ "As a user, I want to view my order history, so that I can track past purchases"
+- ✅ "As a user, I want pages to load in under 2 seconds, so that I don't wait frustratingly"
+- ✅ "As a user, I want the checkout button to work on mobile, so that I can complete purchases"
+- ✅ "As a developer, I want builds to complete in under 30 seconds, so that I get faster feedback" (developers as stakeholders)
 
 ## Refinement Process
 
