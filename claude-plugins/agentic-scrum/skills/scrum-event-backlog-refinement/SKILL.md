@@ -34,10 +34,14 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 
 **Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
 
-- **User Story Format**: See `user-story-format.md` for role, capability, and benefit guidelines
-- **Splitting & Merging**: See `splitting.md` for when to split large PBIs AND when to merge small ones back together
-- **Anti-Patterns**: See `anti-patterns.md` for common PBI mistakes to avoid
-- **Valid Increments**: See `increment.md` for what constitutes demonstrable, user-facing value
+## Reference Documents
+
+| Document | Use When |
+|----------|----------|
+| `user-story-format.md` | Writing or validating User Story format |
+| `splitting.md` | PBI is too large or too small |
+| `anti-patterns.md` | Checking for common PBI mistakes |
+| `increment.md` | Validating that PBI delivers demonstrable value |
 
 ## AI-Agentic Definition of Ready
 
@@ -75,11 +79,10 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 ## Refinement Process
 
 1. **Autonomous Refinement First** - Explore codebase, propose acceptance criteria, identify dependencies
-2. **If AI Can Fill All Gaps** - Update status to `ready`
-3. **If Story Is Too Big** - Split into smaller stories (see `splitting.md`)
-4. **If Story Lacks Value Alone** - Merge with adjacent PBI (see `splitting.md` Anti-Patterns)
-5. **If Only Infrastructure** - Merge with the feature it enables (see anti-pattern #7)
-6. **If Needs Human Help** - Keep as `refining`, document questions
+2. **Validate Increment** - Apply Increment Test to ensure PBI delivers demonstrable value
+3. **Adjust Size** - Split if too big; merge if no standalone value
+4. **If AI Can Fill All Gaps** - Update status to `ready`
+5. **If Needs Human Help** - Keep as `refining`, document questions
 
 ## Backlog Granularity
 
