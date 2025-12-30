@@ -1,8 +1,8 @@
 # Improvement Actions
 
-Common improvement categories for AI-Agentic Scrum retrospectives.
+## Common improvement categories for AI-Agentic Scrum retrospectives.
 
-## Prompt Engineering
+### Prompt Engineering
 
 Improve how AI agents receive and interpret instructions.
 
@@ -13,7 +13,7 @@ Improve how AI agents receive and interpret instructions.
 | Agent asked unnecessary questions | Pre-answer common questions in CLAUDE.md or skills |
 | Agent took suboptimal approach | Add decision guidance or preferred patterns |
 
-## Testing & Verification
+### Testing & Verification
 
 Strengthen the safety net for future sprints.
 
@@ -24,7 +24,7 @@ Strengthen the safety net for future sprints.
 | Flaky tests caused confusion | Fix or quarantine unreliable tests |
 | Coverage gaps discovered | Add unit tests for uncovered paths |
 
-## Process Adaptation
+### Process Adaptation
 
 Tune Scrum artifacts and events to the project.
 
@@ -35,7 +35,7 @@ Tune Scrum artifacts and events to the project.
 | Subtasks too large/small | Adjust subtask guidelines in sprint planning skill |
 | Sprint Review found gaps | Strengthen Definition of Done |
 
-## Tooling & Automation
+### Tooling & Automation
 
 Reduce friction and manual steps.
 
@@ -46,7 +46,7 @@ Reduce friction and manual steps.
 | Missing development tools | Add setup instructions to CLAUDE.md |
 | Error-prone deployments | Automate deployment steps |
 
-## Knowledge Capture
+### Knowledge Capture
 
 Preserve learnings for future sprints.
 
@@ -56,6 +56,19 @@ Preserve learnings for future sprints.
 | External API behavior unclear | Add integration notes |
 | Architectural decision implicit | Create or update ADR |
 | Onboarding friction | Improve README or setup docs |
+
+## Implementing Actions
+
+**Do not disturb existing configurations.** When adding improvements:
+
+| Existing Setup | Correct Approach |
+|----------------|------------------|
+| Global git hooks | Local hooks should call global hooks first, then add project-specific checks |
+| Shared CI/CD templates | Extend or override specific steps, don't replace entire pipelines |
+| Team-wide CLAUDE.md | Add project-specific sections, don't remove inherited guidance |
+| Common test utilities | Import and extend, don't duplicate |
+
+**Principle**: Improvements should be **additive**. If you must modify shared configurations, verify the change doesn't break other projects or workflows.
 
 ## Choosing Actions
 
