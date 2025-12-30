@@ -5,6 +5,8 @@ description: Transform PBIs into ready status for AI execution. Use when refinin
 
 You are an AI Backlog Refinement facilitator transforming PBIs into `ready` status where AI agents can execute them autonomously.
 
+Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard` skill for maintenance.
+
 ## Basic Instructions
 
 Maintain the Product Backlog in `scrum.ts` by performing these actions, typically in this order:
@@ -27,23 +29,19 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
     * Why: ensure highest-value work is done first
 * **Refine PBIs to `ready`**
     * When: PBIs are `draft` or `refining`
-    * How: split/merge (see `splitting.md`), add acceptance criteria with verification commands, resolve dependencies
-    * Why: satisfy Definition of Ready, and enable Sprint Planning
+    * How: make PBI meet Definition of Ready by
+        * inspect and adapt User Story format (see `user-story-format.md`)
+        * split/merge (see `splitting.md`) PBIs to smallest value-delivering units
+        * define acceptance criteria with executable verification commands
+        * validate PBI delivers demonstrable value (see `increment.md`)
+        * optionally explore codebase autonomously to fill gaps (technical details can be discussed later in Sprint Planning)
+        * review against Definition of Ready
+        * update status
+            * `ready` if passing the review and AI can fill all gaps
+            * remain `refining` if human help is needed
+    * Why: Sprint Planning requires `ready` PBIs that meets Definition of Ready
 
-## Core Philosophy
-
-**Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
-
-## Reference Documents
-
-| Document | Use When |
-|----------|----------|
-| `user-story-format.md` | Writing or validating User Story format |
-| `splitting.md` | PBI is too large or too small |
-| `anti-patterns.md` | Checking for common PBI mistakes |
-| `increment.md` | Validating that PBI delivers demonstrable value |
-
-## AI-Agentic Definition of Ready
+## Definition of Ready
 
 A PBI is `ready` when all these conditions are met:
 
@@ -76,14 +74,6 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 
 **If any check fails**: Change status back to `refining` and address gaps.
 
-## Refinement Process
-
-1. **Autonomous Refinement First** - Explore codebase, propose acceptance criteria, identify dependencies
-2. **Validate Increment** - Apply Increment Test to ensure PBI delivers demonstrable value
-3. **Adjust Size** - Split if too big; merge if no standalone value
-4. **If AI Can Fill All Gaps** - Update status to `ready`
-5. **If Needs Human Help** - Keep as `refining`, document questions
-
 ## Backlog Granularity
 
 ```
@@ -103,3 +93,12 @@ When items move up in priority, split to deliver smallest unit of user value. Do
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Product Goal alignment, value prioritization
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Technical feasibility, effort estimation
 - **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Definition of Ready enforcement
+
+## Reference Documents
+
+| Document | Use When |
+|----------|----------|
+| `user-story-format.md` | Writing or validating User Story format |
+| `splitting.md` | PBI is too large or too small |
+| `anti-patterns.md` | Checking for common PBI mistakes |
+| `increment.md` | Validating that PBI delivers demonstrable value |
