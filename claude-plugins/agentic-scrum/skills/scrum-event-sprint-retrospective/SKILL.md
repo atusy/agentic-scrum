@@ -36,35 +36,13 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 ### Phase 3: Decide What to Do
 
-- Select the **most helpful** changes (few, not all) and add them to `scrum.ts`
+- Select the **most helpful** changes (few, not all) and add them to `scrum.ts` following `format.md`
 - Techniques: Impact/Effort Matrix
-
-#### Improvement Format in scrum.ts
-
-```yaml
-retrospectives:
-  - sprint: 1
-    improvements:
-      - action: "Add pre-commit hook for linting"
-        timing: immediate  # immediate | sprint | product
-        status: completed  # active | completed | abandoned
-        outcome: "Reduced lint errors"
-```
-
-Timing field guides when to execute:
-
-| Timing | When to Execute | Examples |
-|--------|-----------------|----------|
-| `immediate` | During Retro | Update CLAUDE.md, skills, DoD, templates |
-| `sprint` | Next Sprint subtask | Documentation, test helpers |
-| `product` | New PBI in backlog | Automation, CI/CD |
-
-**`immediate` constraints**: NO production code, single logical change.
 
 ### Phase 4: Close
 
 - Execute `timing: immediate` actions
-- Update `scrum.ts`
+- Update `scrum.ts` following `format.md`
 - Evaluate the retro itself (Plus/Delta, ROTI)
 
 ## Collaboration
