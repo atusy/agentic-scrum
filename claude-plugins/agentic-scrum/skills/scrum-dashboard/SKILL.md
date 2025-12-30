@@ -8,7 +8,7 @@ description: Maintain scrum.ts dashboard following Agentic Scrum principles. Use
 | Principle | Practice |
 |-----------|----------|
 | **Single Source of Truth** | All Scrum artifacts live in `scrum.ts` |
-| **Git is History** | No timestamps needed |
+| **Git is History** | Commit every meaningful change on `scrum.ts` to track the background context and to make timestamps unneeded |
 | **Order is Priority** | Higher in `product_backlog` array = higher priority |
 | **Schema is Fixed** | Only edit the data section; request human review for type changes |
 
