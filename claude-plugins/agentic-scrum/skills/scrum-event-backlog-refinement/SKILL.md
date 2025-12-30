@@ -29,17 +29,20 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
     * Why: ensure highest-value work is done first
 * **Refine PBIs to `ready`**
     * When: PBIs are `draft` or `refining`
-    * How: make PBI meet Definition of Ready by
-        * inspect and adapt User Story format (see `user-story-format.md`)
-        * split/merge (see `splitting.md`) PBIs to smallest value-delivering units
-        * define acceptance criteria with executable verification commands
-        * validate PBI delivers demonstrable value (see `increment.md`)
-        * optionally explore codebase autonomously to fill gaps (technical details can be discussed later in Sprint Planning)
-        * review against Definition of Ready
-        * update status
-            * `ready` if passing the review and AI can fill all gaps
-            * remain `refining` if human help is needed
-    * Why: Sprint Planning requires `ready` PBIs that meets Definition of Ready
+    * How: follow Refinement Sub-steps below
+    * Why: Sprint Planning requires `ready` PBIs that meet Definition of Ready
+
+### Refinement Sub-steps
+
+1. Inspect and adapt User Story format (see `user-story-format.md`)
+2. Split/merge PBIs to smallest value-delivering units (see `splitting.md`)
+3. Define acceptance criteria with executable verification commands
+4. Validate PBI delivers demonstrable value (see `increment.md`)
+5. Optionally explore codebase to fill gaps (technical details can be discussed later in Sprint Planning)
+6. Review against Definition of Ready
+7. Update status:
+   - `ready` if passing the review and AI can fill all gaps
+   - remain `refining` if human help is needed
 
 ## Definition of Ready
 
