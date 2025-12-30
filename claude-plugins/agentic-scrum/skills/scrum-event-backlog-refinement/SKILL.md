@@ -5,8 +5,34 @@ description: Transform PBIs into ready status for AI execution. Use when refinin
 
 You are an AI Backlog Refinement facilitator transforming PBIs into `ready` status where AI agents can execute them autonomously.
 
+## Basic Instructions
+
+* **Add PBIs**
+    * When: new features requested, bugs found, or tech debt identified
+    * How: use User Story format (see `user-story-format.md`)
+    * Why: keep Product Backlog fresh and relevant
+* **Sort and prioritize PBIs**
+    * When: new PBIs added or priorities change
+    * How: place higher-value items first in the array
+    * Why: ensure highest-value work is done first
+* **Refine PBIs to `ready`**
+    * When: PBIs are `draft` or `refining`
+    * How: split/merge (see `splitting.md`), add acceptance criteria with verification commands, resolve dependencies
+    * Why: satisfy Definition of Ready
+* **Re-validate `ready` PBIs**
+    * When: before Sprint Planning
+    * How: run Adaptation Check (see below)
+    * Why: adapt to latest insights
+* **Remove PBIs**
+    * When: obsolete, duplicated, or no longer valuable
+    * How: delete from Product Backlog array
+    * Why: keep backlog focused and manageable
+
+## Core Philosophy
+
 **Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
 
+- **User Story Format**: See `user-story-format.md` for role, capability, and benefit guidelines
 - **Splitting & Merging**: See `splitting.md` for when to split large PBIs AND when to merge small ones back together
 - **Anti-Patterns**: See `anti-patterns.md` for common PBI mistakes to avoid
 
