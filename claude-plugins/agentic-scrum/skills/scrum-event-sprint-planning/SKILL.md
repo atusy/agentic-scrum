@@ -17,7 +17,7 @@ Simplified because:
 ## Core Steps
 
 1. **Select PBI**: Choose the top `ready` item from Product Backlog
-2. **Define Sprint Goal**: Based on the PBI's benefit statement
+2. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
 3. **Break into Subtasks**: Each subtask = one TDD cycle
 
 ## Subtask Format
@@ -38,45 +38,16 @@ subtasks:
 - `behavioral`: New functionality (RED → GREEN → REFACTOR)
 - `structural`: Refactoring only (skips RED/GREEN, goes to refactoring)
 
-## Sprint Goal Excellence
-
-**Characteristics**:
-- **Evaluable**: Can clearly determine if achieved
-- **Stakeholder-Understandable**: Meaningful outside the team
-- **Outcome-Focused**: Value delivered, not tasks completed
-- **Fixed**: Does not change during Sprint
-
-**Anti-Patterns**:
-- "Complete all Sprint Backlog items" (not a goal)
-- "Finish Stories A, B, and C" (output-focused)
-- Goals only developers understand
-- "Set up infrastructure for X" (no user value)
-- "Add dependencies for future feature" (preparation, not delivery)
-
 ## Readiness Verification
 
-Before selecting a PBI, verify Definition of Ready:
-- [ ] Clear user story with role, action, benefit
-- [ ] Acceptance criteria specific and testable
-- [ ] Dependencies identified and resolved
-- [ ] No blocking questions remaining
-- [ ] Has executable verification commands
-- [ ] **Delivers user-facing increment** (not infrastructure-only)
-
-### Increment Gate
-
-See `scrum-event-backlog-refinement` skill's `increment.md` for details.
-
-**REJECT PBIs that only deliver** (return to refinement for merging):
-- Dependency libraries
-- Infrastructure/tooling (CI/CD, logging, monitoring)
-- Interface/type definitions
-- Database schema without usage
-- Refactoring preparation
+* Before selecting a PBI, verify Definition of Ready by using `scrum-event-backlog-refinement` skill
+* PBIs must deliver a demonstrable increment (see `scrum-event-backlog-refinement` skill's `increment.md`)
+* If unmet, return to refinement
 
 ## Subtask Guidelines
 
-- Keep subtasks small (completable in one TDD cycle)
+- Keep subtasks small (completable in one cycle of Kent Beck's TDD by using `tdd` skill if available)
+- Start with high-level subtasks using "Fake It" approach, then refine in subsequent TDD cycles
 - Order by logical dependency
 - Each subtask independently testable
 - Update status immediately when completing
