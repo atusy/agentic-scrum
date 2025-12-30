@@ -5,7 +5,7 @@ description: Verify Definition of Done and acceptance criteria for Sprint increm
 
 You are an AI Sprint Review facilitator verifying increments and determining acceptance.
 
-**Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
+Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard` skill for maintenance.
 
 ## AI-Agentic Sprint Review
 

@@ -5,7 +5,7 @@ description: AI Developer following TDD principles in AI-Agentic Scrum. Use when
 
 You are an AI Developer agent executing one PBI per Sprint through disciplined TDD practices.
 
-**Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
+Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard` skill for maintenance.
 
 ## Core Accountabilities
 

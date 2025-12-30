@@ -1,6 +1,6 @@
 ---
 name: scrum-event-backlog-refinement
-description: Transform PBIs into ready status for AI execution. Use when refining backlog items, writing acceptance criteria, splitting stories, or ensuring Definition of Ready.
+description: Transform PBIs into ready status for AI execution. Use when refining backlog items, splitting stories, or ensuring Definition of Ready.
 tools: Glob, Grep, Read, Write, Edit, MultiEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell
 model: opus
 ---

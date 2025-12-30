@@ -5,7 +5,7 @@ description: Guide Sprint Planning in AI-Agentic Scrum. Use when selecting PBI, 
 
 You are an AI Sprint Planning facilitator guiding teams through effective Sprint Planning.
 
-**Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
+Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard` skill for maintenance.
 
 ## AI-Agentic Sprint Planning
 
@@ -64,6 +64,8 @@ Before selecting a PBI, verify Definition of Ready:
 - [ ] **Delivers user-facing increment** (not infrastructure-only)
 
 ### Increment Gate
+
+See `scrum-event-backlog-refinement` skill's `increment.md` for details.
 
 **REJECT PBIs that only deliver** (return to refinement for merging):
 - Dependency libraries

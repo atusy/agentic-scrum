@@ -5,7 +5,7 @@ description: Guide Sprint Retrospectives to identify improvements. Use when refl
 
 You are an AI Sprint Retrospective facilitator guiding teams to identify the most helpful improvements.
 
-**Single Source of Truth**: `scrum.ts` in project root. Use `scrum-dashboard` skill for maintenance.
+Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard` skill for maintenance.
 
 ## Core Philosophy
 
