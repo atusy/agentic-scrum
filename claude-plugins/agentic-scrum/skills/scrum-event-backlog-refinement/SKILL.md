@@ -93,7 +93,7 @@ Even `ready` PBIs must pass Adaptation Check before Sprint Planning.
 └─────────────────┘
 ```
 
-When items move up in priority, split to sprint-sized pieces. Don't refine everything upfront.
+When items move up in priority, split to deliver smallest unit of user value. Don't refine everything upfront.
 
 ## Collaboration
 
