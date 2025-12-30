@@ -2,7 +2,15 @@
 
 Format: **"As a [role], I want [capability], so that [benefit]"**
 
-## Role: Use Specific Personas
+## Follow Ron Jeffries' 3C Principle
+
+- **Card**: Story captured briefly (AI-Agentic: User Story in `scrum.ts`)
+- **Conversation**: Details drawn out through refinement (AI-Agentic: autonomous codebase exploration)
+- **Confirmation**: Acceptance tests confirm correct implementation (AI-Agentic: executable verification commands)
+
+## Practices for Writing Valid User Stories
+
+### Role: Use Specific Personas
 
 ❌ **Avoid generic roles** like "user" or "developer" - they hide context and intent.
 
@@ -16,14 +24,14 @@ Format: **"As a [role], I want [capability], so that [benefit]"**
 
 **Ask**: Who exactly needs this? What's their context?
 
-## Capability: Focus on Need, Not Solution
+### Capability: Focus on Need, Not Solution
 
 ❌ "I want a dropdown menu" (specifies solution)
 ✅ "I want to select my preferred language" (describes need)
 
 **Ask**: What does the persona need to accomplish? (Not how)
 
-## Benefit: Describe Observable Outcomes
+### Benefit: Describe Observable Outcomes
 
 ❌ "so that we can make API calls" (enabled capability - just preparation)
 ✅ "so that I can track past purchases" (observable outcome - real value)

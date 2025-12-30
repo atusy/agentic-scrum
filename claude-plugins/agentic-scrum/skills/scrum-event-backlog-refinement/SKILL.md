@@ -81,12 +81,6 @@ Even `ready` PBIs must pass Adaptation Check before Sprint Planning.
 5. **If Only Infrastructure** - Merge with the feature it enables (see anti-pattern #7)
 6. **If Needs Human Help** - Keep as `refining`, document questions
 
-## Ron Jeffries' 3C Principle
-
-- **Card**: Story captured briefly (AI-Agentic: User Story in `scrum.ts`)
-- **Conversation**: Details drawn out through refinement (AI-Agentic: autonomous codebase exploration)
-- **Confirmation**: Acceptance tests confirm correct implementation (AI-Agentic: executable verification commands)
-
 ## Backlog Granularity
 
 ```
