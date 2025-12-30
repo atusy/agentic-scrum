@@ -19,39 +19,39 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 **The Big Axis**: Does this improvement help us deliver Value, achieve Goals, create useful Increments?
 
-## Norman Kerth's Prime Directive
+## Four-Phase Structure
 
-**Read at EVERY retrospective:**
+### Phase 1: Gather Data
 
-> "Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand."
+- The outcome of the actions from the previous sprint retrospective
+- The conversation history of the sprint
+- The `git log` of the sprint
 
-## Five-Phase Structure
+### Phase 2: Generate Insights
 
-### Phase 1: Set the Stage (5-10%)
-- Read Prime Directive
-- Check-in (one-word, ESVP, confidence vote)
-- Establish focus
+- What are key topics to discuss?
+    - If something went well occasionally and you want to keep it happening systematically, consider as improvement
+    - If something went wrong and you want to avoid it happening again, consider as improvement
+- Why did things happen? Root causes, not symptoms
 
-### Phase 2: Gather Data (30-40%)
-- What happened? How did people feel?
-- Techniques: Timeline, Mad/Sad/Glad, 4Ls, Sailboat, Start/Stop/Continue
+### Phase 3: Decide What to Do
 
-### Phase 3: Generate Insights (20-25%)
-- WHY did things happen? Root causes, not symptoms
-- Techniques: 5 Whys, Fishbone, Circles and Soup
+- Select the **most helpful** changes (few, not all) and add them to `scrum.ts`
+- Techniques: Impact/Effort Matrix
 
-### Phase 4: Decide What to Do (15-20%)
-- Select the **most helpful** changes (few, not all)
-- Techniques: Dot Voting, Impact/Effort Matrix
+#### Improvement Format in scrum.ts
 
-### Phase 5: Close (5-10%)
-- Execute `timing: immediate` actions
-- Record to `scrum.ts`
-- Evaluate the retro itself (Plus/Delta, ROTI)
+```yaml
+retrospectives:
+  - sprint: 1
+    improvements:
+      - action: "Add pre-commit hook for linting"
+        timing: immediate  # immediate | sprint | product
+        status: completed  # active | completed | abandoned
+        outcome: "Reduced lint errors"
+```
 
-## Improvement Timing System
-
-Each action needs a `timing` field:
+Timing field guides when to execute:
 
 | Timing | When to Execute | Examples |
 |--------|-----------------|----------|
@@ -61,35 +61,11 @@ Each action needs a `timing` field:
 
 **`immediate` constraints**: NO production code, single logical change.
 
-## Improvement Format in scrum.ts
+### Phase 4: Close
 
-```yaml
-retrospectives:
-  - sprint: 1
-    improvements:
-      - action: "Add pre-commit hook for linting"
-        timing: immediate
-        status: completed  # active | completed | abandoned
-        outcome: "Reduced lint errors"
-```
-
-## Anti-Patterns
-
-| Anti-Pattern | Intervention |
-|--------------|--------------|
-| SM always facilitates | Rotate facilitation |
-| Same format every time | Vary techniques |
-| No action follow-through | Review previous actions at start |
-| Blame culture | Re-read Prime Directive; focus on system |
-| Skipping retrospectives | "Not improving makes us busier" |
-| KPT every time | Surface-level; use varied techniques |
-
-## Psychological Safety
-
-- **Painful improvements aren't improvements** - Work should become safer, easier
-- **What's said in retro stays in retro** - Unless team agrees to share
-- **Focus on system, not blame** - Improve the SYSTEM, not punish individuals
-- **Track happiness** - Make it visible and important
+- Execute `timing: immediate` actions
+- Update `scrum.ts`
+- Evaluate the retro itself (Plus/Delta, ROTI)
 
 ## Collaboration
 
@@ -97,5 +73,3 @@ retrospectives:
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Full participation (not optional!)
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Honest participation, improvement ownership
 - **@agentic-scrum:scrum:events:scrum-event-backlog-refinement**: Outputs larger improvements as PBIs
-
-**NEVER skip, NEVER rush, NEVER blame.** The team should leave feeling heard, hopeful, and ready to improve.
