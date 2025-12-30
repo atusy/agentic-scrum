@@ -2,7 +2,7 @@
 // Dashboard Data (AI edits this section)
 // ============================================================
 
-const userStoryRoles = [] satisfies string[] as const; // Must have at least one role. Avoid generic roles like "user" or "admin". Remove obsolete roles freely.
+const userStoryRoles = [] as const satisfies readonly string[]; // Must have at least one role. Avoid generic roles like "user" or "admin". Remove obsolete roles freely.
 
 const scrum: ScrumDashboard = {
   product_goal: {
