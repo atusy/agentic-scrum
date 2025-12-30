@@ -47,6 +47,8 @@ A PBI is `ready` when all these conditions are met:
 * follows User Story format
 * satisfies INVEST principles strictly
 
+Even `ready` PBIs must pass Adaptation Check before Sprint Planning.
+
 ### INVEST Principles (AI-Agentic)
 
 | Principle | AI-Agentic Interpretation |
@@ -58,18 +60,7 @@ A PBI is `ready` when all these conditions are met:
 | **Small** | Smallest unit delivering user value |
 | **Testable** | Has **executable verification commands** |
 
-## Refinement Process
-
-1. **Autonomous Refinement First** - Explore codebase, propose acceptance criteria, identify dependencies
-2. **If AI Can Fill All Gaps** - Update status to `ready`
-3. **If Story Is Too Big** - Split into smaller stories (see `splitting.md`)
-4. **If Story Lacks Value Alone** - Merge with adjacent PBI (see `splitting.md` Anti-Patterns)
-5. **If Only Infrastructure** - Merge with the feature it enables (see anti-pattern #7)
-6. **If Needs Human Help** - Keep as `refining`, document questions
-
-## Adaptation Check for Ready PBIs
-
-Even `ready` PBIs must be inspected before Sprint Planning:
+### Adaptation Check for Ready PBIs
 
 | Check | Question | If Failed |
 |-------|----------|-----------|
@@ -80,6 +71,15 @@ Even `ready` PBIs must be inspected before Sprint Planning:
 | **Dependencies** | New blockers emerged? | Document and resolve |
 
 **If any check fails**: Change status back to `refining` and address gaps.
+
+## Refinement Process
+
+1. **Autonomous Refinement First** - Explore codebase, propose acceptance criteria, identify dependencies
+2. **If AI Can Fill All Gaps** - Update status to `ready`
+3. **If Story Is Too Big** - Split into smaller stories (see `splitting.md`)
+4. **If Story Lacks Value Alone** - Merge with adjacent PBI (see `splitting.md` Anti-Patterns)
+5. **If Only Infrastructure** - Merge with the feature it enables (see anti-pattern #7)
+6. **If Needs Human Help** - Keep as `refining`, document questions
 
 ## Ron Jeffries' 3C Principle
 
