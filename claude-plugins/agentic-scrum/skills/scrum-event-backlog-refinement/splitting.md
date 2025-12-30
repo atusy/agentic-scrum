@@ -78,8 +78,8 @@ Split technical investigation from feature implementation.
 ```
 Before: User can book using external payment API
 After:
-  - [Spike] Investigate payment API integration options (2 pts)
-  - User can book using payment API (5 pts)
+  - [Spike] Investigate payment API integration options
+  - User can book using payment API
 ```
 
 ## Anti-Patterns (Merge These)

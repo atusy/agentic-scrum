@@ -105,15 +105,15 @@ Even `ready` PBIs must be inspected before Sprint Planning:
 
 ## Ron Jeffries' 3C Principle
 
-- **Card**: Story on card with estimates (intentionally brief)
-- **Conversation**: Details drawn out through PO discussion
-- **Confirmation**: Acceptance tests confirm correct implementation
+- **Card**: Story captured briefly (AI-Agentic: User Story in `scrum.ts`)
+- **Conversation**: Details drawn out through refinement (AI-Agentic: autonomous codebase exploration)
+- **Confirmation**: Acceptance tests confirm correct implementation (AI-Agentic: executable verification commands)
 
 ## Backlog Granularity
 
 ```
 ┌─────────────────┐
-│  FINE-GRAINED   │  ← Ready for upcoming sprints (1-5 points)
+│  FINE-GRAINED   │  ← Ready for upcoming sprints (single PBI per sprint)
 ├─────────────────┤
 │    MEDIUM       │  ← Next 2-3 sprints, may need splitting
 ├─────────────────┤
