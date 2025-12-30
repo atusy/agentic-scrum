@@ -72,12 +72,12 @@ Ask: What risk does login reduce? What value does it deliver? What feedback can 
 **Bad**: PBI delivers only technical infrastructure without user-facing value
 
 ```
-❌ "As a developer, I want CI/CD pipeline set up, so that deployments are automated"
-❌ "As a developer, I want logging infrastructure, so that we can debug issues"
-❌ "As a developer, I want database configured, so that we can persist data"
-❌ "As a developer, I want HTTP client added, so that we can call external APIs"
-✅ "As a developer, I want errors reported automatically, so that I fix issues before users report them"
-✅ "As a user, I want to view my order history, so that I can track past purchases"
+❌ "As a DevOps engineer, I want CI/CD pipeline set up, so that deployments are automated"
+❌ "As a backend developer, I want logging infrastructure, so that we can debug issues"
+❌ "As a backend developer, I want database configured, so that we can persist data"
+❌ "As a frontend developer, I want HTTP client added, so that we can call external APIs"
+✅ "As an on-call engineer, I want errors reported automatically, so that I fix issues before users report them"
+✅ "As a returning customer, I want to view my order history, so that I can track past purchases"
 ```
 
 The difference: valid stories have benefits that describe **observable outcomes**, not just **enabled capabilities**.

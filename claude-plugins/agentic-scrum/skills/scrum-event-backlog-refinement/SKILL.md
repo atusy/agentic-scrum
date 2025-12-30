@@ -43,16 +43,16 @@ Before marking a PBI as `ready`, verify it produces a **meaningful increment**:
 | **Standalone Value** | Does it deliver value WITHOUT requiring another PBI first? | Merge with dependent PBI |
 
 **Invalid Increments** (merge with features):
-- ❌ "As a developer, I want CI/CD configured, so that deployments are automated" → no user-facing benefit yet
-- ❌ "As a developer, I want HTTP client library added, so that we can make API calls" → just preparation
-- ❌ "As a developer, I want database schema created, so that we can store data" → infrastructure only
-- ❌ "As a developer, I want API types defined, so that we have contracts" → no implementation
+- ❌ "As a backend developer, I want CI/CD configured, so that deployments are automated" → no user-facing benefit yet
+- ❌ "As a backend developer, I want HTTP client library added, so that we can make API calls" → just preparation
+- ❌ "As a backend developer, I want database schema created, so that we can store data" → infrastructure only
+- ❌ "As a frontend developer, I want API types defined, so that we have contracts" → no implementation
 
 **Valid Increments**:
-- ✅ "As a user, I want to view my order history, so that I can track past purchases"
-- ✅ "As a user, I want pages to load in under 2 seconds, so that I don't wait frustratingly"
-- ✅ "As a user, I want the checkout button to work on mobile, so that I can complete purchases"
-- ✅ "As a developer, I want builds to complete in under 30 seconds, so that I get faster feedback" (developers as stakeholders)
+- ✅ "As a returning customer, I want to view my order history, so that I can track past purchases"
+- ✅ "As a shopper, I want pages to load in under 2 seconds, so that I don't abandon my cart in frustration"
+- ✅ "As a mobile shopper, I want the checkout button to work, so that I can complete purchases on my phone"
+- ✅ "As a plugin developer, I want builds to complete in under 30 seconds, so that I get faster feedback on my changes"
 
 ## Refinement Process
 
