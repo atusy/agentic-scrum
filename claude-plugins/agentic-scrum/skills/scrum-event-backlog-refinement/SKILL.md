@@ -11,7 +11,7 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 
 * **Add PBIs**
     * When: new features requested, bugs found, or tech debt identified
-    * How: use User Story format (see `user-story-format.md`)
+    * How: add `draft` PBIs in User Story format (see `user-story-format.md`) with minimal initial details
     * Why: keep Product Backlog fresh and relevant
 * **Remove PBIs**
     * When: obsolete, duplicated, or no longer valuable
@@ -37,6 +37,7 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 - **User Story Format**: See `user-story-format.md` for role, capability, and benefit guidelines
 - **Splitting & Merging**: See `splitting.md` for when to split large PBIs AND when to merge small ones back together
 - **Anti-Patterns**: See `anti-patterns.md` for common PBI mistakes to avoid
+- **Valid Increments**: See `increment.md` for what constitutes demonstrable, user-facing value
 
 ## AI-Agentic Definition of Ready
 
@@ -52,32 +53,10 @@ A PBI is `ready` when all these conditions are met:
 |-----------|---------------------------|
 | **Independent** | Can reprioritize freely, **AND** no human dependencies |
 | **Negotiable** | Clear outcome, flexible implementation |
-| **Valuable** | User Story format makes valid increment; **PBI must deliver user-facing benefit on its own** |
+| **Valuable** | Can deliver increment specified as observable, user-facing benefit in User Story (see `increment.md`) |
 | **Estimable** | All information needed is available |
 | **Small** | Smallest unit delivering user value |
 | **Testable** | Has **executable verification commands** |
-
-### Valid Increment Validation
-
-Before marking a PBI as `ready`, verify it produces a **meaningful increment**:
-
-| Check | Question | If No |
-|-------|----------|-------|
-| **User-Facing Value** | Does the `benefit` describe something a user/stakeholder can observe or use? | Merge with feature that delivers value |
-| **Demonstrable** | Can we show working software at Sprint Review? | Not an increment - merge or rewrite |
-| **Standalone Value** | Does it deliver value WITHOUT requiring another PBI first? | Merge with dependent PBI |
-
-**Invalid Increments** (merge with features):
-- ❌ "As a backend developer, I want CI/CD configured, so that deployments are automated" → no user-facing benefit yet
-- ❌ "As a backend developer, I want HTTP client library added, so that we can make API calls" → just preparation
-- ❌ "As a backend developer, I want database schema created, so that we can store data" → infrastructure only
-- ❌ "As a frontend developer, I want API types defined, so that we have contracts" → no implementation
-
-**Valid Increments**:
-- ✅ "As a returning customer, I want to view my order history, so that I can track past purchases"
-- ✅ "As a shopper, I want pages to load in under 2 seconds, so that I don't abandon my cart in frustration"
-- ✅ "As a mobile shopper, I want the checkout button to work, so that I can complete purchases on my phone"
-- ✅ "As a plugin developer, I want builds to complete in under 30 seconds, so that I get faster feedback on my changes"
 
 ## Refinement Process
 
