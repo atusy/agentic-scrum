@@ -47,7 +47,7 @@ A PBI is `ready` when all these conditions are met:
 * follows User Story format
 * satisfies INVEST principles strictly
 
-Even `ready` PBIs must pass Adaptation Check before Sprint Planning.
+Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to the above before Sprint Planning.
 
 ### INVEST Principles (AI-Agentic)
 
