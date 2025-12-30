@@ -40,27 +40,24 @@ Maintain the Product Backlog in `scrum.ts` by performing these actions, typicall
 
 ## AI-Agentic Definition of Ready
 
-**Ready = AI can complete it without asking humans.**
+A PBI is `ready` when all these conditions are met:
 
-A PBI is `ready` when:
-1. AI can complete without human input
-2. User Story format (role, capability, benefit)
-3. Acceptance criteria have **executable verification commands**
-4. Dependencies are resolved
-5. INVEST principles are satisfied
+* executable without human intervention
+* follows User Story format
+* satisfies INVEST principles strictly
 
-## INVEST Principles (AI-Agentic)
+### INVEST Principles (AI-Agentic)
 
 | Principle | AI-Agentic Interpretation |
 |-----------|---------------------------|
 | **Independent** | Can reprioritize freely, **AND** no human dependencies |
 | **Negotiable** | Clear outcome, flexible implementation |
-| **Valuable** | User Story format makes value explicit; **PBI must deliver user-facing benefit on its own** |
+| **Valuable** | User Story format makes valid increment; **PBI must deliver user-facing benefit on its own** |
 | **Estimable** | All information needed is available |
 | **Small** | Smallest unit delivering user value |
 | **Testable** | Has **executable verification commands** |
 
-## Valid Increment Validation
+### Valid Increment Validation
 
 Before marking a PBI as `ready`, verify it produces a **meaningful increment**:
 
