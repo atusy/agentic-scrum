@@ -11,8 +11,10 @@ Read `scrum.ts` and do the following steps
 3. Sprint execution as scrum-team-developer following `tdd` skill
 4. Sprint Review
 5. Sprint Retrospective
-6. compact `scrum.ts` as scrum-team-scrum-master (keep ≤300 lines)
-7. recurse the above steps with /scrum:go command as long as refinable/ready PBIs remain
+6. compact `scrum.ts` and commit as scrum-team-scrum-master (keep ≤300 lines)
+7. `git commit --allow-empty -m "chore(scrum): completed sprint-<number>-$(uuidgen)"` where `<number>` is the sprint number just completed
+8. `git tag sprint-<number>-<uuid>` where `<number>` and `<uuid>` are as above
+9. recurse the above steps with /scrum:go command as long as refinable/ready PBIs remain
 
 ## Skills and Subagents
 
