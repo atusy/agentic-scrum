@@ -1,4 +1,32 @@
 // ============================================================
+// Dashboard Data (AI edits this section)
+// ============================================================
+
+const scrum: ScrumDashboard = {
+  product_goal: {
+    statement: "", // TODO: Define your Product Goal
+    success_metrics: [],
+  },
+
+  product_backlog: [],
+
+  sprint: null,
+
+  definition_of_done: {
+    checks: [
+      // TODO: Add your Definition of Done checks
+      // Example:
+      // { name: "Tests pass", run: "npm test" },
+      // { name: "Lint passes", run: "npm run lint" },
+    ],
+  },
+
+  completed: [],
+
+  retrospectives: [],
+};
+
+// ============================================================
 // Type Definitions (DO NOT MODIFY - request human review for schema changes)
 // ============================================================
 
@@ -6,7 +34,12 @@
 type PBIStatus = "draft" | "refining" | "ready" | "done";
 
 // Sprint lifecycle
-type SprintStatus = "planning" | "in_progress" | "review" | "done" | "cancelled";
+type SprintStatus =
+  | "planning"
+  | "in_progress"
+  | "review"
+  | "done"
+  | "cancelled";
 
 // TDD cycle: pending -> red (test written) -> green (impl done) -> refactoring -> completed
 type SubtaskStatus = "pending" | "red" | "green" | "refactoring" | "completed";
@@ -105,34 +138,6 @@ interface ScrumDashboard {
   completed: Sprint[];
   retrospectives: Retrospective[];
 }
-
-// ============================================================
-// Dashboard Data (AI edits this section)
-// ============================================================
-
-const scrum: ScrumDashboard = {
-  product_goal: {
-    statement: "", // TODO: Define your Product Goal
-    success_metrics: [],
-  },
-
-  product_backlog: [],
-
-  sprint: null,
-
-  definition_of_done: {
-    checks: [
-      // TODO: Add your Definition of Done checks
-      // Example:
-      // { name: "Tests pass", run: "npm test" },
-      // { name: "Lint passes", run: "npm run lint" },
-    ],
-  },
-
-  completed: [],
-
-  retrospectives: [],
-};
 
 // JSON output (deno run scrum.ts | jq for queries)
 console.log(JSON.stringify(scrum, null, 2));
