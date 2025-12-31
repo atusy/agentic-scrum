@@ -16,16 +16,16 @@ Read `scrum.ts` and do the following steps
 8. `git tag sprint-<number>-<uuid>` where `<number>` and `<uuid>` are as above
 9. recurse the above steps with /scrum:go command as long as refinable/ready PBIs remain
 
-## Skills and Subagents
+## Subagents and Skills
 
-To execute the steps, use adequate skills by default or subagents on user request:
+To execute the steps, use adequate subagents by default or skills on user request:
 
-| skills (default)                 | subagents (on user request)                                  |
-|----------------------------------|--------------------------------------------------------------|
-| scrum-event-backlog-refinement   | @agentic-scrum:scrum:events:scrum-event-backlog-refinement   |
-| scrum-event-sprint-planning      | @agentic-scrum:scrum:events:scrum-event-sprint-planning      |
-| scrum-event-sprint-retrospective | @agentic-scrum:scrum:events:scrum-event-sprint-retrospective |
-| scrum-event-sprint-review        | @agentic-scrum:scrum:events:scrum-event-sprint-review        |
-| scrum-team-developer             | @agentic-scrum:scrum:team:scrum-team-developer               |
-| scrum-team-scrum-master          | @agentic-scrum:scrum:team:scrum-team-scrum-master            |
-| scrum-team-product-owner         | @agentic-scrum:scrum:team:scrum-team-product-owner           |
+| subagents (default)                                          | skills (on user request)         |
+|--------------------------------------------------------------|----------------------------------|
+| @agentic-scrum:scrum:events:scrum-event-backlog-refinement   | scrum-event-backlog-refinement   |
+| @agentic-scrum:scrum:events:scrum-event-sprint-planning      | scrum-event-sprint-planning      |
+| @agentic-scrum:scrum:events:scrum-event-sprint-retrospective | scrum-event-sprint-retrospective |
+| @agentic-scrum:scrum:events:scrum-event-sprint-review        | scrum-event-sprint-review        |
+| @agentic-scrum:scrum:team:scrum-team-developer               | scrum-team-developer             |
+| @agentic-scrum:scrum:team:scrum-team-scrum-master            | scrum-team-scrum-master          |
+| @agentic-scrum:scrum:team:scrum-team-product-owner           | scrum-team-product-owner         |
