@@ -9,9 +9,13 @@ You are setting up a new project with the AI-Agentic Scrum methodology. This com
 
 **Reference**: Use the `scrum-dashboard` skill for ongoing dashboard maintenance after initialization.
 
+### Step 0: Create `scrum.ts`
+
+By just copying the `scrum.template.ts` file from the `scrum-dashboard` skill directory.
+
 ### Step 1: Gather Project Information
 
-Ask the user the following questions interactively. Wait for answers before proceeding to file generation.
+Ask the user the following questions interactively. For existing projects, scan config files (e.g., `package.json`, `pyproject.toml`) first and offer detected values as defaults. Update `scrum.ts` according to the answers.
 
 **Required Information:**
 
@@ -22,11 +26,12 @@ Ask the user the following questions interactively. Wait for answers before proc
    - This becomes the Product Goal statement
 
 3. **Tech Stack**: What technologies is this project using?
-   - Language(s): e.g., Python, TypeScript, Rust, Go
-   - Test framework: e.g., pytest, jest, vitest, cargo test
-   - Linter/formatter: e.g., ruff, eslint, prettier, rustfmt
-   - Type checker: e.g., mypy, tsc, none
-   - This determines the Definition of Done verification commands
+   - Language(s)
+   - Test command
+   - Lint command
+   - Type check command (if any)
+
+   Suggest choices of the latest modern tools that fit the project. These determine the Definition of Done verification commands.
 
 4. **Initial PBI Ideas**: What are the first 2-3 features or user stories you want to build?
    - For each, ask:
@@ -46,21 +51,9 @@ After gathering information, generate the `scrum.ts` file by using the `scrum-da
 
 Replace placeholders with actual values:
 
-**For Definition of Done checks**, use appropriate commands based on tech stack:
+**For Definition of Done checks**, apply the commands gathered in Step 1.3.
 
-| Tech Stack | Test Command | Lint Command | Type Check |
-|------------|--------------|--------------|------------|
-| Python (pytest/ruff/mypy) | `pytest tests/ -v --tb=short` | `ruff check . && ruff format --check .` | `mypy src/ --strict` |
-| TypeScript (jest/eslint) | `npm test` | `npm run lint` | `npx tsc --noEmit` |
-| TypeScript (vitest/eslint) | `npm run test` | `npm run lint` | `npx tsc --noEmit` |
-| Rust | `cargo test` | `cargo clippy -- -D warnings` | `cargo check` |
-| Go | `go test ./...` | `golangci-lint run` | (use `echo ok` or remove) |
-
-### Step 4: Write the File
-
-Save the generated content to `scrum.ts` in the project root.
-
-### Step 5: Validate and Guide
+### Step 4: Validate and Guide
 
 After creating the file:
 
@@ -94,7 +87,7 @@ After creating the file:
    deno run scrum.ts | jq '.sprint.subtasks[] | select(.status == "red")'
    ```
 
-### Step 6: Commit the Initial Dashboard
+### Step 5: Commit the Initial Dashboard
 
 Unless `scrum.ts` is gitignored.
 
