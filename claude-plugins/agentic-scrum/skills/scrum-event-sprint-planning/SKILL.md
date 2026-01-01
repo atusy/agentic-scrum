@@ -38,7 +38,7 @@ Ask:
 ### Subtask Principles
 
 - Keep subtasks small (completable in one cycle of Kent Beck's TDD by using `tdd` skill if available)
-- Start with high-level subtasks using "Fake It" approach, then refine in subsequent TDD cycles
+- Design subtasks to tidy first—refactor to prepare the change, draft high-level "Fake It" subtasks, then evolve them through successive TDD cycles
 - Order by logical dependency
 - Each subtask independently testable
 - Update status immediately when completing
