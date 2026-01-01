@@ -62,6 +62,44 @@ subtasks:
 - `behavioral`: New functionality (RED → GREEN → REFACTOR)
 - `structural`: Refactoring only (skips RED/GREEN, goes to refactoring)
 
+### Example: Tidy First → Fake It → Evolve
+
+**PBI**: "As a user, I want to export my data to CSV format"
+
+**Subtasks following tidy-first-then-fake-it pattern**:
+
+```yaml
+subtasks:
+  # 1. Tidy First (structural)
+  - test: "N/A (structural refactoring)"
+    implementation: "Extract data serialization logic into separate module"
+    type: structural
+    status: pending
+
+  # 2. Fake It (behavioral - minimal implementation)
+  - test: "Export returns CSV with headers only"
+    implementation: "Create exportToCSV() that returns hardcoded CSV headers"
+    type: behavioral
+    status: pending
+
+  # 3. Evolve (behavioral - add real data)
+  - test: "Export includes actual user data rows"
+    implementation: "Extend exportToCSV() to iterate and serialize data rows"
+    type: behavioral
+    status: pending
+
+  # 4. Evolve (behavioral - handle edge cases)
+  - test: "Export escapes commas and quotes in data fields"
+    implementation: "Add CSV escaping logic to serialization"
+    type: behavioral
+    status: pending
+```
+
+**Why this order**:
+1. **Tidy First**: Clean code structure makes subsequent changes easier
+2. **Fake It**: Establish the simplest working implementation (just headers)
+3. **Evolve**: Incrementally add real behavior through successive TDD cycles
+
 ## Collaboration
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Sprint Goal input, Product Backlog prioritization
