@@ -8,7 +8,7 @@ Read `scrum.ts` and do the following steps
 
 1. Product Backlog Refinement
 2. Sprint Planning
-3. Sprint execution as scrum-team-developer following `tdd` skill
+3. Sprint Execution
 4. Sprint Review
 5. Sprint Retrospective
 6. compact `scrum.ts` and commit as scrum-team-scrum-master (keep ≤300 lines)
@@ -24,8 +24,9 @@ To execute the steps, use adequate subagents by default or skills on user reques
 |--------------------------------------------------------------|----------------------------------|
 | @agentic-scrum:scrum:events:scrum-event-backlog-refinement   | scrum-event-backlog-refinement   |
 | @agentic-scrum:scrum:events:scrum-event-sprint-planning      | scrum-event-sprint-planning      |
-| @agentic-scrum:scrum:events:scrum-event-sprint-retrospective | scrum-event-sprint-retrospective |
+| @agentic-scrum:scrum:events:scrum-event-sprint-execution     | scrum-event-sprint-execution     |
 | @agentic-scrum:scrum:events:scrum-event-sprint-review        | scrum-event-sprint-review        |
+| @agentic-scrum:scrum:events:scrum-event-sprint-retrospective | scrum-event-sprint-retrospective |
 | @agentic-scrum:scrum:team:scrum-team-developer               | scrum-team-developer             |
 | @agentic-scrum:scrum:team:scrum-team-scrum-master            | scrum-team-scrum-master          |
 | @agentic-scrum:scrum:team:scrum-team-product-owner           | scrum-team-product-owner         |
