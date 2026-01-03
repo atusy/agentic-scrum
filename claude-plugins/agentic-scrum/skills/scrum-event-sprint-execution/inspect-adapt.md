@@ -1,6 +1,6 @@
-# Inspect and Adapt During Sprint Execution
+# Inspect and Adapt (Daily Scrum)
 
-This document provides guidance on the inspect-and-adapt cycle that distinguishes Sprint Execution from mere task completion.
+This phase fulfills the **Daily Scrum's purpose** in AI-Agentic Scrum. In traditional Scrum, the Daily Scrum is a time-boxed event for inspecting progress and adapting the plan. In continuous AI execution, this happens after each subtask rather than once per day.
 
 ## The Inspection Mindset
 
@@ -110,6 +110,26 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 - Work that belongs to a different PBI
 
 **When in doubt**: Consult @agentic-scrum:scrum:team:scrum-team-product-owner before adapting.
+
+## Impediment Reporting
+
+If you encounter blockers during inspection, report them immediately:
+
+```yaml
+# Add to scrum.ts sprint.impediments
+impediments:
+  - description: "External API returns unexpected format"
+    impact: "Cannot complete data import subtask"
+    reported_at_subtask: "Implement API data fetching"
+    resolution_attempts: ["Checked API docs", "Tested with curl"]
+```
+
+Notify @agentic-scrum:scrum:team:scrum-team-scrum-master for impediment removal.
+
+**Types of impediments:**
+- Technical blockers (missing dependencies, API issues, environment problems)
+- Unclear requirements (ambiguous acceptance criteria)
+- Scope questions (discovered complexity beyond original estimate)
 
 ## Recording Adaptations
 

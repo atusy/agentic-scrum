@@ -31,18 +31,39 @@ Execute the next `pending` subtask using `scrum-team-developer` skill with `tdd`
 
 Mark subtask `completed` when done.
 
-### 2. Inspect
+### 2. Inspect & Adapt (Daily Scrum)
 
-After completing a subtask, review:
+This phase fulfills the Daily Scrum's purpose in AI-Agentic Scrum: inspect progress and adapt the plan. In continuous AI execution, this happens after each subtask rather than once per day.
+
+#### Subtask-Level Inspection
+
+Review what the completed subtask revealed:
 
 - **What was achieved** vs. what was planned
 - **What was learned** about the problem domain
 - **What changed** in the codebase structure
 - **What risks** emerged or were mitigated
 
+#### Sprint Goal Progress Check
+
+Step back and assess the bigger picture:
+
+- **Are we on track** toward the Sprint Goal?
+- **Is remaining work** still the right path, or should we re-prioritize?
+- **Are there impediments** blocking progress?
+
+If impediments exist, report to @agentic-scrum:scrum:team:scrum-team-scrum-master:
+```yaml
+# Add to scrum.ts sprint.impediments
+impediments:
+  - description: "What is blocking progress"
+    impact: "How it affects Sprint Goal"
+    reported_at_subtask: "subtask description"
+```
+
 See `inspect-adapt.md` for detailed inspection guidance.
 
-### 3. Adapt
+#### Adapt the Plan
 
 Based on inspection, update remaining subtasks:
 
@@ -56,7 +77,7 @@ Based on inspection, update remaining subtasks:
 
 **Update `scrum.ts`** with any subtask changes before continuing.
 
-### 4. Repeat or Complete
+### 3. Repeat or Complete
 
 - If `pending` subtasks remain → Return to Step 1
 - If all subtasks `completed` → Proceed to **Holistic Review**
