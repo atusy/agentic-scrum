@@ -84,33 +84,7 @@ Based on inspection, update remaining subtasks:
 
 ## Holistic Review
 
-Before transitioning to Sprint Review, review the **entire change** as a cohesive whole:
-
-### Review Aspects
-
-| Aspect | Questions to Ask |
-|--------|------------------|
-| **Cohesion** | Do the changes work together as a unified feature? |
-| **Consistency** | Are naming, patterns, and style consistent across all changes? |
-| **Duplication** | Did incremental implementation introduce duplication to eliminate? |
-| **Coupling** | Are modules appropriately decoupled? Any unexpected dependencies? |
-| **Testability** | Is test coverage adequate? Any untested edge cases? |
-| **Documentation** | Do comments, docstrings, or docs need updating? |
-
-### Final Refactoring
-
-Apply `/tdd:refactor` for any improvements discovered during holistic review:
-
-- Extract common patterns that emerged across subtasks
-- Rename for consistency across the entire change
-- Reorganize code structure now that the full picture is clear
-- Remove any scaffolding or temporary code from incremental development
-
-**Commit each refactoring step separately** following Tidy First discipline.
-
-### Then Transition
-
-Once holistic review is complete → Update `sprint.status` to `review`
+Before transitioning to Sprint Review, review the **entire change** as a cohesive whole. See `holistic-review.md` for detailed guidance.
 
 ## Subtask Status Lifecycle
 
@@ -119,21 +93,6 @@ pending → red → green → refactoring → completed
             │      │          │
          (test) (commit)  (commit × N)
 ```
-
-## Adaptation Guidelines
-
-### DO Adapt When
-
-- Implementation taught you something that changes remaining work
-- Tests revealed behavior you hadn't considered
-- Refactoring exposed a better structure
-- You discovered the plan was based on incorrect assumptions
-
-### DON'T Adapt When
-
-- It's scope creep beyond the Sprint Goal
-- It's "while I'm here" work unrelated to current PBI
-- It violates acceptance criteria (consult Product Owner instead)
 
 ## Collaboration
 
@@ -145,8 +104,6 @@ pending → red → green → refactoring → completed
 
 When all subtasks are `completed`:
 
-1. Perform Holistic Review (see above)
-2. Apply final refactoring with commits
-3. Verify Sprint Goal is achieved
-4. Update `sprint.status` to `review`
-5. Hand off to @agentic-scrum:scrum:events:scrum-event-sprint-review
+1. Perform Holistic Review (see `holistic-review.md`)
+2. Update `sprint.status` to `review`
+3. Hand off to @agentic-scrum:scrum:events:scrum-event-sprint-review
