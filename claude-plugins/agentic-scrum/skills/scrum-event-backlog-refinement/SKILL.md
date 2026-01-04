@@ -39,7 +39,12 @@ Iterate over up to 5 PBIs in `draft` or `refining` status and perform these step
 1. Inspect and adapt User Story format (see `user-story-format.md`)
 2. Split/merge PBIs to smallest value-delivering units (see `splitting.md`)
 3. Define acceptance criteria with executable verification commands
-4. Validate PBI delivers demonstrable value (see `increment.md`)
+4. **Apply Increment Test (MANDATORY)** - see `increment.md`:
+   - ❓ Can we show working software at Sprint Review?
+   - ❓ Does a user/stakeholder benefit DIRECTLY?
+   - ❓ Does it work WITHOUT another PBI completing first?
+   - **If any answer is NO**: Merge with a value-delivering PBI or add to Definition of Done
+   - Infrastructure-only work (CI/CD, dependencies, schemas) is NEVER a valid PBI
 5. Optionally explore codebase to fill gaps (technical details can be discussed later in Sprint Planning)
 6. Review against Definition of Ready
 7. Update status:
@@ -52,6 +57,7 @@ Low-priority PBIs can stay in `draft` or `refining` longer even without details;
 
 A PBI is `ready` when all these conditions are met:
 
+* **passes the Increment Test** (see `increment.md`) - delivers observable, user-facing value
 * executable without human intervention
 * follows User Story format
 * satisfies INVEST principles strictly

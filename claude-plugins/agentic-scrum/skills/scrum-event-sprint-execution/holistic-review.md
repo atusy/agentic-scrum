@@ -15,6 +15,7 @@ The Holistic Review provides the "step back" moment to see the forest, not just 
 
 | Aspect | Questions to Ask |
 |--------|------------------|
+| **Increment Delivered** | Does the implementation deliver the observable, user-facing value promised in the PBI? |
 | **Cohesion** | Do the changes work together as a unified feature? |
 | **Consistency** | Are naming, patterns, and style consistent across all changes? |
 | **Duplication** | Did incremental implementation introduce duplication to eliminate? |
