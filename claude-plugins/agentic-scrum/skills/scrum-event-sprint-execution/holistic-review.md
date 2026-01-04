@@ -25,7 +25,7 @@ The Holistic Review provides the "step back" moment to see the forest, not just 
 
 ## Final Refactoring
 
-Apply `/tdd:refactor` for any improvements discovered:
+Use refactoring-related skills for any improvements discovered:
 
 - Extract common patterns that emerged across subtasks
 - Rename for consistency across the entire change
