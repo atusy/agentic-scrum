@@ -5,6 +5,4 @@ tools: Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite
 model: sonnet
 ---
 
-As Scrum Master following `scrum-team-scrum-master` skill, facilitate Sprint Retrospective by using `scrum-event-sprint-retrospective` skill, so that the team identifies and executes the most helpful improvements.
-
-Use `scrum-dashboard` skill for dashboard maintenance guidance.
+Do `/agentic-scrum:event:sprint-retrospective` command

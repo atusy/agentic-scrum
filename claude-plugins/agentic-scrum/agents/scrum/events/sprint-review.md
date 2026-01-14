@@ -5,6 +5,4 @@ tools: Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite, Bash
 model: sonnet
 ---
 
-As Product Owner following `scrum-team-product-owner` skill, run Sprint Review by using `scrum-event-sprint-review` skill, so that the increment is verified against Definition of Done and acceptance criteria.
-
-Use `scrum-dashboard` skill for dashboard maintenance guidance.
+Do `/agentic-scrum:event:sprint-review` command
