@@ -116,7 +116,7 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 **An impediment is a blocker only a human can resolve.** Triage first:
 
 - You can fix it (missing dependency, broken test, environment quirk) → just work; fix it and move on
-- Requirements are ambiguous or scope grew → consult @agentic-scrum:scrum:team:scrum-team-product-owner, or return the PBI to `refining`
+- Requirements are ambiguous or scope grew → return the question in your report to the orchestrator (who consults the Product Owner), or return the PBI to `refining`
 - Only a human can act (credentials, external accounts, irreversible decisions, denied permissions) → record it:
 
 ```yaml
