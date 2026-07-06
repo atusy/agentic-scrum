@@ -20,6 +20,6 @@ Acceptance is the PO's decision alone; record it with rationale in `sprint.decis
 # Skills
 
 * `scrum-conversation` for the dialogue protocol
-* `scrum-team-product-owner` to follow scrum principles
+* `scrum-team-scrum-master` for facilitation
 * `scrum-event-sprint-review` for review guidance
 * `scrum-dashboard` skill for dashboard maintenance guidance
