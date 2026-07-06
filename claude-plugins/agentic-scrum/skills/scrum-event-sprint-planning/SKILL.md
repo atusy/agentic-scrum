@@ -31,7 +31,7 @@ Simplified because:
 
 Ask:
 - "What do we want to demonstrate at Sprint Review?"
-- "What would make stakeholders excited?"
+- "What would make the human user — the only stakeholder — excited?"
 - "What can we show as a working increment?"
 
 ## Subtask Guidelines

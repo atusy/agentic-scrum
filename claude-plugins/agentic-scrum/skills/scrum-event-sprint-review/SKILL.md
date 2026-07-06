@@ -16,6 +16,8 @@ Focuses on verification:
 
 ## Core Philosophy
 
+**"Stakeholder" here means the human user of this plugin** — reachable asynchronously via the dashboard and loop stop conditions, not present in the event.
+
 **Sprint Review is NOT just a demo!**
 - **Transparency**: Show only completed Increments (meeting DoD)
 - **Inspection**: Examine product, gather feedback
@@ -83,15 +85,14 @@ subtasks:
 Sprint Review STILL happens:
 - Acknowledge openly no Increment met DoD
 - Discuss why items weren't completed
-- Continue with environmental updates
-- Gather stakeholder input on priorities
+- Record questions for the human user (impediments or PBI `notes`) instead of assuming their priorities
 - Assess Product Goal impact
 
 ## Product Goal Progress
 
 Guide discussion around:
 - How does this Sprint contribute to Product Goal?
-- Is Product Goal still achievable at current pace?
+- Is the Product Goal still achievable, or is something systematically blocking progress?
 - What is planned next toward the Goal?
 
 ## Collaboration

@@ -48,7 +48,7 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 ## Collaboration
 
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, safety concerns
+- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, enforcing honest verdicts over reflexive agreement
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Full participation (not optional!)
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Honest participation, improvement ownership
 - **Backlog Refinement** (next event in the loop): larger improvements become `draft` PBIs for it to refine
