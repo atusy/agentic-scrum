@@ -56,7 +56,7 @@ deno check scrum.ts
 Each acceptance criterion has an executable command - run them all.
 
 ### 3. Determine Acceptance
-- **All pass** → Set PBI status to `done`, set `sprint.status` to `done`, and move the Sprint object to the dashboard's `completed` array
+- **All pass** → the Product Owner records acceptance in the dashboard: set PBI status to `done`, set `sprint.status` to `done`, and move the Sprint object to the `completed` array
 - **Any fail** → Return with details
 
 ## Failure Handling
@@ -99,7 +99,7 @@ Guide discussion around:
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: PBI completion status, acceptance decision
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Demo preparation, DoD verification
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, impediment identification
+- **Scrum Master** (the facilitator — not spawned): Facilitation, impediment identification
 - **Sprint Retrospective** (next event in the loop): consumes Review outcomes for reflection
 
 Sprint Review is a collaborative working session for inspecting the product and adapting based on feedback. Transparency is paramount - show only what is truly complete.
