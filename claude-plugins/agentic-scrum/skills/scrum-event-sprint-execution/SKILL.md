@@ -21,7 +21,7 @@ For each iteration:
 
 ### 1. Execute
 
-Execute the next `pending` subtask using `scrum-team-developer` skill with `tdd` skill:
+Execute the next `pending` subtask using `scrum-team-developer` skill with the `tdd` skill if available (otherwise apply Red-Green-Refactor directly):
 
 ```
 /tdd:red   → Write failing test, update status to `red`

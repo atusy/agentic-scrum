@@ -16,12 +16,12 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 ## TDD Execution
 
-**Use `tdd` skill and commands for all development work.**
+**Use the `tdd` skill and `/tdd:*` commands if available; otherwise apply Kent Beck's Red-Green-Refactor discipline directly.**
 
 | Command | Phase | Purpose |
 |---------|-------|---------|
 | `/tdd:red` | RED | Write ONE failing test (no commit) |
-| `/tdd:green` | GREEN | Make test pass, then `/git:commit` |
+| `/tdd:green` | GREEN | Make test pass, then commit (`/git:commit` if available) |
 | `/tdd:refactor` | REFACTOR | Improve code quality, commit per step |
 
 **Timing**: Each cycle should be seconds to minutes. Stuck in RED > 5 minutes? Test is too ambitious.
