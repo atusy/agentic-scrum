@@ -79,7 +79,7 @@ subtasks:
 1. Report to Product Owner
 2. Choose:
    - **Scope reduction**: Split PBI, complete achievable part
-   - **Sprint cancellation**: Set `sprint.status = "cancelled"`, return PBI
+   - **Sprint cancellation** (Product Owner only): set `sprint.status = "cancelled"`, then do the same bookkeeping as acceptance except the PBI is not done — move the Sprint object to `completed` (as a cancelled record), clear `scrum.sprint` to `null`, and return the PBI to `refining` (re-refine before it is picked again). Record why in the Sprint's `decisions`.
 3. Always run Retrospective to analyze root cause
 
 ## No-Increment Situations
