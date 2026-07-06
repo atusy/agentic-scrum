@@ -45,18 +45,29 @@ Ask:
 - Update status immediately when completing
 - Mark `type`: `behavioral` or `structural`
 
-### Subtask Format
+### Sprint Format
 
-Each subtask in `scrum.ts` should follow TDD structure:
+Planning writes a complete `Sprint` object to `scrum.ts` — all fields are required, so initialize the empty arrays explicitly or `deno check` fails:
 
-```yaml
-subtasks:
-  - test: "What behavior to verify (RED phase)"
-    implementation: "What to build (GREEN phase)"
-    type: behavioral  # behavioral | structural
-    status: pending   # pending | red | green | refactoring | completed
-    commits: []
-    notes: []
+```typescript
+sprint: {
+  number: 2,
+  pbi_id: "PBI-007",
+  goal: "Mobile shoppers can complete checkout",
+  status: "in_progress", // planning sets this when the plan is agreed
+  subtasks: [
+    {
+      test: "What behavior to verify (RED phase)",
+      implementation: "What to build (GREEN phase)",
+      type: "behavioral", // behavioral | structural
+      status: "pending", // pending | red | green | refactoring | completed
+      commits: [],
+      notes: [],
+    },
+  ],
+  impediments: [], // required — initialize empty
+  decisions: [], // required — record conversation outcomes here
+},
 ```
 
 **Subtask types**:
@@ -100,6 +111,8 @@ subtasks:
 1. **Tidy First**: Clean code structure makes subsequent changes easier
 2. **Fake It**: Establish the simplest working implementation (just headers)
 3. **Evolve**: Incrementally add real behavior through successive TDD cycles
+
+(When writing these into `scrum.ts`, include the required `commits: []` and `notes: []` on every subtask — omitted above for readability.)
 
 ## Collaboration
 
