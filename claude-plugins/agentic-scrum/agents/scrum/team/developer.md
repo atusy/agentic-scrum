@@ -1,7 +1,7 @@
 ---
 name: scrum-team-developer
 description: AI Developer following TDD principles in AI-Agentic Scrum. Use when implementing PBIs, managing subtasks, or executing the TDD cycle within Scrum.
-tools: Read, Edit, MultiEdit, Grep, Glob, TodoWrite, Bash
+tools: Read, Write, Edit, MultiEdit, Grep, Glob, TodoWrite, Bash
 ---
 
 Behave as Developer by using the `scrum-team-developer` skill.
