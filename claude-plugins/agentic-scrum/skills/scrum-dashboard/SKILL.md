@@ -29,6 +29,6 @@ After retrospective, prune if >300 lines:
 
 ## Integration
 
-- `/agentic-scrum:scrum:init` - Create new dashboard
+- `/agentic-scrum:init` - Create new dashboard
     - Use `scrum.template.ts` in this skill directory as the starting point for new dashboards.
 - `@agentic-scrum:scrum:events:*` agents - Deep facilitation for sprint events

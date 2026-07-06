@@ -1,3 +1,7 @@
+---
+description: Facilitate Sprint Planning to define Sprint Goal and subtasks
+---
+
 # Task
 
 Facilitate Sprint Planning so that the team has a clear Sprint Goal and subtask breakdown

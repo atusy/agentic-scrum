@@ -1,6 +1,10 @@
+---
+description: Execute Sprint through TDD-based inspect-and-adapt cycles
+---
+
 # Task
 
-Execute Sprint so to deliver increment through disciplined TDD-based inspect-adapt cyecles
+Execute Sprint so to deliver increment through disciplined TDD-based inspect-adapt cycles
 
 ## Sprint Workflow
 

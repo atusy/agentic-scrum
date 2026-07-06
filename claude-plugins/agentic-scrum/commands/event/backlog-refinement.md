@@ -1,3 +1,7 @@
+---
+description: Facilitate Product Backlog Refinement to make PBIs ready
+---
+
 # Task
 
 Refine Product Backlog so that PBIs become ready for sprint planning

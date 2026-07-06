@@ -1,3 +1,7 @@
+---
+description: Run Sprint Review to verify the increment and decide acceptance
+---
+
 # Task
 
 Run Sprint Review so that the increment is verified against Definition of Done and acceptance criteria
