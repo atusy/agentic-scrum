@@ -38,17 +38,22 @@ After each subtask, pause and reflect. Don't rush to the next subtask. The few m
 ### Add Subtasks
 
 ```yaml
+# New subtasks need all required fields (commits/notes) or deno check fails
 # Discovered edge case during implementation
 - test: "Handle empty input gracefully"
   implementation: "Add early return for empty collections"
   type: behavioral
   status: pending
+  commits: []
+  notes: []
 
 # Found prerequisite refactoring needed
 - test: "N/A (structural)"
   implementation: "Extract validation logic before adding new validators"
   type: structural
   status: pending
+  commits: []
+  notes: []
 ```
 
 ### Modify Subtasks

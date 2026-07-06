@@ -64,12 +64,14 @@ Each acceptance criterion has an executable command - run them all.
 ### Minor Fix Possible
 ```yaml
 # Set sprint.status back to "in_progress" while fixing
-# Add fix subtask:
+# Add fix subtask (commits/notes are required by the schema — initialize them):
 subtasks:
   - test: "Fix [specific issue]"
     implementation: "Resolve the failure"
     type: behavioral
     status: pending
+    commits: []
+    notes: []
 # Re-run Review after fix
 ```
 
