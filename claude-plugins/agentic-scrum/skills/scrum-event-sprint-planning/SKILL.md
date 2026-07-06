@@ -19,6 +19,7 @@ Simplified because:
 1. **Select PBI**: Choose the top `ready` item from Product Backlog
 2. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
 3. **Break into Subtasks**: Each subtask = one TDD cycle
+4. **Start the Sprint**: Set `sprint.status` to `in_progress` — Sprint Planning is the only place this transition happens
 
 ## Readiness Verification
 

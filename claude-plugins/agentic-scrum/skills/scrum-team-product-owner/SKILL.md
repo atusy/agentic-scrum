@@ -69,9 +69,9 @@ In Scrum event conversations (see `scrum-conversation` skill), argue from the **
 
 When Developer completes a Sprint:
 
-1. **Run All Verification Commands** from acceptance criteria and DoD
-2. **Accept or Reject** - All pass → move to `completed`; any fail → return with details
-3. **Update Dashboard** - Add to completed section
+1. **Verify** all acceptance criteria and DoD checks (see Sprint Acceptance verification in `scrum-event-sprint-review` skill)
+2. **Accept or Reject** - All pass → accept; any fail → return with details
+3. **Update Dashboard** - Set PBI status to `done`, set `sprint.status` to `done`, move the Sprint object to `completed`
 
 ## Value Maximization
 

@@ -52,7 +52,7 @@ deno check scrum.ts
 Each acceptance criterion has an executable command - run them all.
 
 ### 3. Determine Acceptance
-- **All pass** → Move PBI to `completed`
+- **All pass** → Set PBI status to `done`, set `sprint.status` to `done`, and move the Sprint object to the dashboard's `completed` array
 - **Any fail** → Return with details
 
 ## Failure Handling
