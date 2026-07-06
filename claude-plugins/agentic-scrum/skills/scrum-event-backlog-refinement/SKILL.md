@@ -91,7 +91,7 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Product Goal alignment, value prioritization
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Technical feasibility, effort estimation
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Definition of Ready enforcement
+- **Scrum Master** (the facilitator — not spawned): Definition of Ready enforcement
 
 ## Reference Documents
 
