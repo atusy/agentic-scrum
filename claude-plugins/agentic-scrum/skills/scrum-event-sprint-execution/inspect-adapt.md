@@ -109,7 +109,7 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 - Gold-plating beyond what's needed
 - Work that belongs to a different PBI
 
-**When in doubt**: Consult @agentic-scrum:scrum:team:scrum-team-product-owner before adapting.
+**When in doubt**: Stop and return the scope question in your report; the orchestrator consults the Product Owner and re-delegates. Do not adapt speculatively.
 
 ## Impediment Reporting
 
@@ -131,7 +131,7 @@ impediments:
       - "Tried localstack; behavior differs for IAM"
 ```
 
-Notify @agentic-scrum:scrum:team:scrum-team-scrum-master; a `waiting_human` impediment that blocks the Sprint Goal stops the loop rather than being silently worked around.
+Surface it in your report to the orchestrator; a `waiting_human` impediment that blocks the Sprint Goal stops the loop rather than being silently worked around.
 
 ## Recording Adaptations
 

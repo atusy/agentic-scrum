@@ -55,4 +55,4 @@ Once holistic review is complete:
 
 1. Verify Sprint Goal is achieved
 2. Update `sprint.status` to `review`
-3. Hand off to @agentic-scrum:scrum:events:scrum-event-sprint-review
+3. Report completion to the orchestrator — Sprint Review is the next event in the loop

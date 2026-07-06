@@ -53,7 +53,7 @@ Step back and assess the bigger picture:
 - **Is remaining work** still the right path, or should we re-prioritize?
 - **Are there impediments** blocking progress?
 
-Blockers you can resolve yourself are just work — resolve them. Only when a blocker **requires a human** (credentials, irreversible decisions, denied permissions), report to @agentic-scrum:scrum:team:scrum-team-scrum-master:
+Blockers you can resolve yourself are just work — resolve them. Only when a blocker **requires a human** (credentials, irreversible decisions, denied permissions), record it in the dashboard and surface it in your report to the orchestrator:
 ```yaml
 # Add to scrum.ts sprint.impediments
 impediments:
@@ -76,7 +76,7 @@ Based on inspection, update remaining subtasks:
 | Discovered edge cases | Add new subtasks for edge case handling |
 | Found prerequisite work | Insert structural subtask before next behavioral one |
 | Subtask is now unnecessary | Remove it with note explaining why |
-| Scope question emerged | Consult @agentic-scrum:scrum:team:scrum-team-product-owner |
+| Scope question emerged | Stop and return the question in your report; the orchestrator consults the Product Owner and re-delegates |
 
 **Update `scrum.ts`** with any subtask changes before continuing.
 
@@ -99,9 +99,11 @@ pending → red → green → refactoring → completed
 
 ## Collaboration
 
-- **@agentic-scrum:scrum:team:scrum-team-developer** - TDD execution of subtasks
-- **@agentic-scrum:scrum:team:scrum-team-product-owner** - Scope clarification, acceptance criteria questions
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master** - Impediment removal, process guidance
+You typically run as a subagent and **cannot message other agents directly**. Route everything through your report to the orchestrator (the facilitator running the sprint loop):
+
+- Scope clarification, acceptance criteria questions → orchestrator consults the Product Owner
+- Human-only impediments → recorded in `sprint.impediments`, surfaced in your report
+- Everything the orchestrator needs must be in the dashboard or your final report — nothing else survives your context
 
 ## Sprint Completion
 
@@ -109,4 +111,4 @@ When all subtasks are `completed`:
 
 1. Perform Holistic Review (see `holistic-review.md`)
 2. Update `sprint.status` to `review`
-3. Hand off to @agentic-scrum:scrum:events:scrum-event-sprint-review
+3. Report completion to the orchestrator — Sprint Review is the next event in the loop
