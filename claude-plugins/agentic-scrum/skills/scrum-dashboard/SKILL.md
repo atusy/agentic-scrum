@@ -31,4 +31,4 @@ After retrospective, prune if >300 lines:
 
 - `/agentic-scrum:init` - Create new dashboard
     - Use `scrum.template.ts` in this skill directory as the starting point for new dashboards.
-- `@agentic-scrum:scrum:events:*` agents - Deep facilitation for sprint events
+- `/agentic-scrum:event:*` commands - Sprint events as team conversations (`@agentic-scrum:scrum:events:*` agents as delegation fallback)

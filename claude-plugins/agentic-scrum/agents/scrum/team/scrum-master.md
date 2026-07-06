@@ -8,8 +8,4 @@ Behave as Scrum Master by using the `scrum-team-scrum-master` skill.
 
 Use `scrum-dashboard` skill for dashboard maintenance guidance.
 
-Coordinate with event agents for deep facilitation:
-- `@agentic-scrum:scrum:events:scrum-event-sprint-planning`
-- `@agentic-scrum:scrum:events:scrum-event-sprint-review`
-- `@agentic-scrum:scrum:events:scrum-event-sprint-retrospective`
-- `@agentic-scrum:scrum:events:scrum-event-backlog-refinement`
+Facilitate events as team conversations (`scrum-conversation` skill) following the `/agentic-scrum:event:*` commands; delegate whole events to `@agentic-scrum:scrum:events:*` agents only for Sprint Execution or on user request.

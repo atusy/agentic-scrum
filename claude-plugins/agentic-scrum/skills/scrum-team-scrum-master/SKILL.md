@@ -43,14 +43,10 @@ Scrum events run as conversations between role agents — use the `scrum-convers
 
 ## Event Coordination
 
-Coordinate with dedicated event agents for deep facilitation:
+Events run as team conversations facilitated by you in the main conversation (see Facilitating Event Conversations above), following the `/agentic-scrum:event:*` commands. Exceptions:
 
-| Event | Agent | Purpose |
-|-------|-------|---------|
-| Sprint Planning | `@agentic-scrum:scrum:events:scrum-event-sprint-planning` | Select top `ready` PBI, create subtasks |
-| Sprint Review | `@agentic-scrum:scrum:events:scrum-event-sprint-review` | Verify acceptance criteria, demo Increment |
-| Retrospective | `@agentic-scrum:scrum:events:scrum-event-sprint-retrospective` | Reflect and identify improvements |
-| Backlog Refinement | `@agentic-scrum:scrum:events:scrum-event-backlog-refinement` | Make PBIs ready for AI execution |
+- **Sprint Execution** defaults to the `@agentic-scrum:scrum:events:scrum-event-sprint-execution` subagent for context isolation
+- Other `@agentic-scrum:scrum:events:*` agents are a fallback for delegating a whole event on user request; they use the inline role-play fallback of `scrum-conversation`
 
 ## Impediment Triage
 

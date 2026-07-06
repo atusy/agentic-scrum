@@ -51,4 +51,4 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 - **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, safety concerns
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Full participation (not optional!)
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Honest participation, improvement ownership
-- **@agentic-scrum:scrum:events:scrum-event-backlog-refinement**: Outputs larger improvements as PBIs
+- **Backlog Refinement** (next event in the loop): larger improvements become `draft` PBIs for it to refine
