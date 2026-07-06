@@ -15,7 +15,9 @@ By just copying the `scrum.template.ts` file from the `scrum-dashboard` skill di
 
 ### Step 1: Gather Project Information
 
-Ask the user the following questions interactively. For existing projects, scan config files (e.g., `package.json`, `pyproject.toml`) first and offer detected values as defaults. Update `scrum.ts` according to the answers.
+For existing projects, scan config files (e.g., `package.json`, `pyproject.toml`, `deno.json`, `Cargo.toml`, `go.mod`) and the README first to derive defaults.
+
+Then interview the user with the **AskUserQuestion tool** (batches of up to 4 questions). Offer detected values as the recommended first option; the built-in "Other" choice captures free-text answers. Fall back to plain-text questions only if the tool is unavailable. Update `scrum.ts` according to the answers.
 
 **Required Information:**
 
@@ -93,4 +95,4 @@ Unless `scrum.ts` is gitignored.
 
 ---
 
-**Begin by asking the user the required questions one section at a time.**
+**Begin by scanning the project for defaults, then interview the user one section at a time.**
