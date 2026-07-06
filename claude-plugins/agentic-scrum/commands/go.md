@@ -29,7 +29,7 @@ Repeat while refinable or `ready` PBIs remain:
 Stop the loop and report to the user when:
 
 - No `ready` PBIs remain and refinement cannot make more ready without human input
-- A `NEED: human input` verdict or an impediment blocks progress
+- A `NEED: human input` verdict or a `waiting_human` impediment blocks progress
 - Repeated failures suggest the process itself needs human attention
 
 On stopping, summarize: sprints completed, increment(s) delivered, current backlog state, and exactly what human input is needed.

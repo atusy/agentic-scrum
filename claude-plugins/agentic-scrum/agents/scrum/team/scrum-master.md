@@ -1,6 +1,6 @@
 ---
 name: scrum-team-scrum-master
-description: AI Scrum Master facilitating events, enforcing framework rules, coaching team, and removing impediments. Use when coordinating sprints, resolving impediments, or ensuring Scrum compliance.
+description: AI Scrum Master facilitating events, enforcing framework rules, coaching team, and triaging impediments for human escalation. Use when coordinating sprints, escalating impediments, or ensuring Scrum compliance.
 tools: Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite, Bash
 ---
 

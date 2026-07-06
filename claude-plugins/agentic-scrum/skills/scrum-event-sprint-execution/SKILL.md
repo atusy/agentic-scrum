@@ -53,14 +53,15 @@ Step back and assess the bigger picture:
 - **Is remaining work** still the right path, or should we re-prioritize?
 - **Are there impediments** blocking progress?
 
-If impediments exist, report to @agentic-scrum:scrum:team:scrum-team-scrum-master:
+Blockers you can resolve yourself are just work — resolve them. Only when a blocker **requires a human** (credentials, irreversible decisions, denied permissions), report to @agentic-scrum:scrum:team:scrum-team-scrum-master:
 ```yaml
 # Add to scrum.ts sprint.impediments
 impediments:
   - description: "What is blocking progress"
     impact: "How it affects Sprint Goal"
-    status: active
-    notes: ["Found while working on subtask X", "Tried Y, did not help"]
+    request: "What exactly the human should do or decide"
+    status: waiting_human
+    notes: ["Found while working on subtask X", "Tried workaround Y, did not help"]
 ```
 
 See `inspect-adapt.md` for detailed inspection guidance.

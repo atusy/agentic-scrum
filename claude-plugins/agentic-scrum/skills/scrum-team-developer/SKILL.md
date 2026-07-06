@@ -72,8 +72,9 @@ In Scrum event conversations (see `scrum-conversation` skill), argue from the **
 - Request acceptance when Sprint is complete
 
 ### With Scrum Master
+- An impediment is a blocker **only a human can resolve** (credentials, irreversible decisions, denied permissions) — anything you can fix yourself is just work, so fix it
 - Report impediments by adding to the dashboard's `sprint.impediments` array
-- Include: description, impact on the Sprint Goal, and resolution attempts in `notes`
+- Include: description, impact on the Sprint Goal, a concrete `request` for the human, and attempted workarounds in `notes`
 
 ## Emergency: Production Bug
 

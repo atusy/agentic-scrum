@@ -44,7 +44,7 @@ Rules:
 
 - **Max 3 rounds per topic.** Still `OBJECT` after round 3 → the role with authority over the topic decides ("disagree and commit") and the dissent is recorded.
 - `NEED` for information an agent can gather itself → gather it and continue the round.
-- `NEED` for human input → record it (PBI `notes` or `sprint.impediments`) and move to the next topic; never fabricate an answer.
+- `NEED` for human input → record it (PBI `notes`, or `sprint.impediments` with a concrete `request` stating what the human should do or decide) and move to the next topic; never fabricate an answer.
 - Conversation does not change authority: the PO decides value, ordering, and acceptance; the Developer decides implementation approach; the facilitator only breaks process deadlocks.
 
 ## Minutes

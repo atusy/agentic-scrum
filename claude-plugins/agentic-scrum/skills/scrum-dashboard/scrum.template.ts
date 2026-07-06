@@ -60,7 +60,10 @@ type ImprovementTiming = "immediate" | "sprint" | "product";
 
 type ImprovementStatus = "active" | "completed" | "abandoned";
 
-type ImpedimentStatus = "active" | "resolved";
+// An impediment is a blocker ONLY a human can resolve (credentials, external
+// accounts, irreversible decisions, denied permissions). Agent-solvable
+// obstacles are just work; PBI gaps go back to refinement instead.
+type ImpedimentStatus = "waiting_human" | "resolved";
 
 interface SuccessMetric {
   metric: string;
@@ -109,8 +112,9 @@ interface Subtask {
 interface Impediment {
   description: string;
   impact: string; // how it affects the Sprint Goal
+  request: string; // what exactly the human should do or decide
   status: ImpedimentStatus;
-  notes: string[]; // resolution attempts, outcome
+  notes: string[]; // workarounds attempted, resolution outcome
 }
 
 interface Sprint {

@@ -113,26 +113,25 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 
 ## Impediment Reporting
 
-If you encounter blockers during inspection, report them immediately:
+**An impediment is a blocker only a human can resolve.** Triage first:
+
+- You can fix it (missing dependency, broken test, environment quirk) → just work; fix it and move on
+- Requirements are ambiguous or scope grew → consult @agentic-scrum:scrum:team:scrum-team-product-owner, or return the PBI to `refining`
+- Only a human can act (credentials, external accounts, irreversible decisions, denied permissions) → record it:
 
 ```yaml
 # Add to scrum.ts sprint.impediments
 impediments:
-  - description: "External API returns unexpected format"
-    impact: "Cannot complete data import subtask"
-    status: active
+  - description: "Deploy step requires production AWS credentials"
+    impact: "Cannot verify the acceptance criterion that exercises the live endpoint"
+    request: "Provide read-only AWS credentials, or approve verifying against staging instead"
+    status: waiting_human
     notes:
-      - "Reported at subtask: Implement API data fetching"
-      - "Checked API docs"
-      - "Tested with curl"
+      - "Found at subtask: Verify deployed endpoint"
+      - "Tried localstack; behavior differs for IAM"
 ```
 
-Notify @agentic-scrum:scrum:team:scrum-team-scrum-master for impediment removal.
-
-**Types of impediments:**
-- Technical blockers (missing dependencies, API issues, environment problems)
-- Unclear requirements (ambiguous acceptance criteria)
-- Scope questions (discovered complexity beyond original estimate)
+Notify @agentic-scrum:scrum:team:scrum-team-scrum-master; a `waiting_human` impediment that blocks the Sprint Goal stops the loop rather than being silently worked around.
 
 ## Recording Adaptations
 
