@@ -4,4 +4,4 @@ description: Guide Sprint Planning in AI-Agentic Scrum. Use when selecting PBI, 
 tools: Bash, Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite
 ---
 
-Do `/agentic-scrum:event:sprint-planning` command
+Run the `/agentic-scrum:event:sprint-planning` command. If you cannot invoke the command, do the same work by using the `scrum-conversation` (inline role-play fallback), `scrum-team-scrum-master`, `scrum-team-developer`, `scrum-event-sprint-planning`, and `scrum-dashboard` skills.

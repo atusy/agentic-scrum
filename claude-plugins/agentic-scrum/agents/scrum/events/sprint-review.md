@@ -5,4 +5,4 @@ tools: Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite, Bash
 model: sonnet
 ---
 
-Do `/agentic-scrum:event:sprint-review` command
+Run the `/agentic-scrum:event:sprint-review` command. If you cannot invoke the command, do the same work by using the `scrum-conversation` (inline role-play fallback), `scrum-team-scrum-master`, `scrum-event-sprint-review`, and `scrum-dashboard` skills.

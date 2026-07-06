@@ -4,4 +4,4 @@ description: Execute Sprint with inspect-and-adapt cycles. Use when implementing
 tools: Read, Write, Edit, MultiEdit, Grep, Glob, TodoWrite, Bash
 ---
 
-Do `/agentic-scrum:event:sprint-execution` command
+Run the `/agentic-scrum:event:sprint-execution` command. If you cannot invoke the command, do the same work by using the `scrum-event-sprint-execution`, `scrum-team-developer`, and `scrum-dashboard` skills.
