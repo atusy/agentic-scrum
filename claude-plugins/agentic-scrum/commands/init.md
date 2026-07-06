@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read, Write, Bash(cat:*), Bash(ls:*), Bash(deno:*)
+allowed-tools: Read, Write, AskUserQuestion, Bash(cat:*), Bash(ls:*), Bash(deno:*), Bash(jq:*)
 description: Initialize a scrum.ts file based on AI-Agentic Scrum Dashboard template
 ---
 
@@ -68,7 +68,7 @@ After creating the file:
 
 3. **Explain next steps**:
    - Review and refine the initial PBIs
-   - Change status from `draft` to `ready` when stories are complete
+   - Backlog Refinement moves stories `draft` → `refining` → `ready` once they pass the Definition of Ready
    - Run Sprint Planning to start the first sprint
 
 4. **Mention the core principles**:
