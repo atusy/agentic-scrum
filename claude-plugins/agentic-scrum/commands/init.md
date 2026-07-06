@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read, Write, AskUserQuestion, Bash(cat:*), Bash(ls:*), Bash(deno:*), Bash(jq:*)
+allowed-tools: Read, Write, AskUserQuestion, Bash(cat:*), Bash(ls:*), Bash(deno:*), Bash(jq:*), Bash(git:*)
 description: Initialize a scrum.ts file based on AI-Agentic Scrum Dashboard template
 ---
 
