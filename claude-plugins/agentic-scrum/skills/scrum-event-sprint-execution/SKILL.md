@@ -49,6 +49,7 @@ Review what the completed subtask revealed:
 Step back and assess the bigger picture:
 
 - **Are we on track** toward the Sprint Goal?
+- **Are implementations wired** to deliver the intended value?
 - **Is remaining work** still the right path, or should we re-prioritize?
 - **Are there impediments** blocking progress?
 

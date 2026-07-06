@@ -48,15 +48,42 @@ Each subtask has `type`: `behavioral` (new functionality) or `structural` (refac
 
 ## Sprint Workflow
 
-### Starting a Subtask
-1. Find next `pending` subtask in dashboard
-2. Update status to `red` when writing test
-3. Begin TDD cycle with `/tdd:red`
+### Tidy first
 
-### Completing a Subtask
+1. Do tidy first refactoring to prepare upcoming changes
+
+### Do subtasks
+
+#### Starting a Subtask
+1. Find next `pending` subtask in dashboard
+2. Inspect and adapt the detail to the current situation
+3. Update status to `red` when writing test
+4. Begin TDD cycle with `/tdd:red`
+
+#### Completing a Subtask
 1. Ensure all tests pass
 2. Update status to `completed` in dashboard
 3. Move to next subtask
+
+### Ensure all changes are wired
+
+1. Verify new code is actually called from existing code paths
+2. If not wired: add subtasks to integrate, or remove unused code (YAGNI)
+3. Return to **Do subtasks** if new subtasks were added
+
+### Inspect and adapt the changes
+
+1. Ask subagents to perform strict multi-perspective reviews
+2. Fact-check the review findings against actual code
+3. Adapt based on verified issues
+4. Repeat until confident (minimum 3 cycles)
+
+### Comprehensive Refactoring
+
+1. Ask subagents to identify refactoring opportunities
+2. Fact-check proposed refactorings for validity
+3. Apply refactorings using `/tdd:refactor` or `refactoring` skill
+4. Repeat until code quality is satisfactory (minimum 3 cycles)
 
 ### Completing the Sprint
 1. All subtasks marked `completed`
