@@ -63,7 +63,7 @@ Each acceptance criterion has an executable command - run them all.
 
 ### Minor Fix Possible
 ```yaml
-# Keep sprint.status = "in_progress"
+# Set sprint.status back to "in_progress" while fixing
 # Add fix subtask:
 subtasks:
   - test: "Fix [specific issue]"
