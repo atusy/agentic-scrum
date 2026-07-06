@@ -46,9 +46,9 @@ Coordinate with dedicated event agents for deep facilitation:
 ## Impediment Resolution
 
 1. **Identification**: Listen for blockers during events
-2. **Documentation**: Record in dashboard with severity and impact
-3. **Escalation**: Classify as team-solvable or external
-4. **Tracking**: Update status until resolved
+2. **Documentation**: Record in `sprint.impediments` with impact on the Sprint Goal
+3. **Escalation**: Classify as team-solvable or external (needs human input)
+4. **Tracking**: Update `status` to `resolved` with the outcome in `notes`
 5. **Prevention**: Add systemic issues to Retrospective
 
 ## Dashboard Compaction

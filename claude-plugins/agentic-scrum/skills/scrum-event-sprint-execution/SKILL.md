@@ -59,7 +59,8 @@ If impediments exist, report to @agentic-scrum:scrum:team:scrum-team-scrum-maste
 impediments:
   - description: "What is blocking progress"
     impact: "How it affects Sprint Goal"
-    reported_at_subtask: "subtask description"
+    status: active
+    notes: ["Found while working on subtask X", "Tried Y, did not help"]
 ```
 
 See `inspect-adapt.md` for detailed inspection guidance.

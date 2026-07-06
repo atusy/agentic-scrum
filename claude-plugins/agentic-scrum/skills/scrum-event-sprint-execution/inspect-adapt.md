@@ -120,8 +120,11 @@ If you encounter blockers during inspection, report them immediately:
 impediments:
   - description: "External API returns unexpected format"
     impact: "Cannot complete data import subtask"
-    reported_at_subtask: "Implement API data fetching"
-    resolution_attempts: ["Checked API docs", "Tested with curl"]
+    status: active
+    notes:
+      - "Reported at subtask: Implement API data fetching"
+      - "Checked API docs"
+      - "Tested with curl"
 ```
 
 Notify @agentic-scrum:scrum:team:scrum-team-scrum-master for impediment removal.

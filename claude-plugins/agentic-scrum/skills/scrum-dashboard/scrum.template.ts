@@ -60,6 +60,8 @@ type ImprovementTiming = "immediate" | "sprint" | "product";
 
 type ImprovementStatus = "active" | "completed" | "abandoned";
 
+type ImpedimentStatus = "active" | "resolved";
+
 interface SuccessMetric {
   metric: string;
   target: string;
@@ -86,6 +88,7 @@ interface PBI {
   story: UserStory;
   acceptance_criteria: AcceptanceCriterion[];
   status: PBIStatus;
+  notes?: string[]; // refinement decisions, dissent, open questions
 }
 
 interface Commit {
@@ -103,12 +106,21 @@ interface Subtask {
   notes: string[];
 }
 
+interface Impediment {
+  description: string;
+  impact: string; // how it affects the Sprint Goal
+  status: ImpedimentStatus;
+  notes: string[]; // resolution attempts, outcome
+}
+
 interface Sprint {
   number: number;
   pbi_id: string;
   goal: string;
   status: SprintStatus;
   subtasks: Subtask[];
+  impediments: Impediment[];
+  decisions: string[]; // key decisions from event conversations, incl. dissent
 }
 
 interface DoDCheck {

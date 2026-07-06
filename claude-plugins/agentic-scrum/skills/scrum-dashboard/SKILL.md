@@ -23,7 +23,7 @@ wc -l scrum.ts               # Line count (target: ≤300, hard limit: 600)
 ## Compaction
 
 After retrospective, prune if >300 lines:
-- `completed`: Keep latest 2-3 sprints only
+- `completed`: Keep latest 2-3 sprints only; drop their `impediments`/`decisions`/`notes` details (git history keeps them)
 - `retrospectives`: Remove `completed`/`abandoned` improvements
 - `product_backlog`: Remove `done` PBIs
 

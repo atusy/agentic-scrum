@@ -99,8 +99,8 @@ Each subtask has `type`: `behavioral` (new functionality) or `structural` (refac
 - Request acceptance when Sprint is complete
 
 ### With Scrum Master
-- Report impediments by adding to dashboard's `impediments.active` array
-- Include: description, impact, severity, resolution attempts
+- Report impediments by adding to the dashboard's `sprint.impediments` array
+- Include: description, impact on the Sprint Goal, and resolution attempts in `notes`
 
 ## Emergency: Production Bug
 
