@@ -33,14 +33,14 @@ Update subtask status in `scrum.ts` following TDD phases:
 ```
 pending → red → green → refactoring → completed
             │      │          │
-         (commit)(commit)  (commit × N)
+         (test) (commit)  (commit × N)
 ```
 
 | Status | Meaning | Commit |
 |--------|---------|--------|
 | `pending` | Not started | None |
-| `red` | Failing test written | `test: ...` |
-| `green` | Test passing | `feat: ...` or `fix: ...` |
+| `red` | Failing test written | None — never commit a failing test |
+| `green` | Test passing | `feat: ...` or `fix: ...` (includes the test) |
 | `refactoring` | Improving structure | `refactor: ...` (multiple OK) |
 | `completed` | All done | None (status update only) |
 
