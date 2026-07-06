@@ -11,7 +11,8 @@ Run Sprint Review so that the increment is verified against Definition of Done a
 Run as a facilitated conversation (`scrum-conversation` skill):
 
 * **Dev demonstrates**: what the increment does (achievement, not activity), with DoD and acceptance-criteria evidence from actually executed commands
-* **PO inspects**: re-runs verification commands, probes the demo from the user's perspective, then decides `AGREE` (accept) or `OBJECT` (reject with specifics)
+* **Facilitator re-runs**: independently re-executes the verification commands (the PO deliberately has no Bash — it judges, it does not execute) and hands the PO the transcripts
+* **PO inspects**: probes the demo and transcripts from the user's perspective, then decides `AGREE` (accept) or `OBJECT` (reject with specifics)
 * **Both adapt**: feedback that is out of scope becomes new `draft` PBIs, never scope creep in this sprint
 
 Acceptance is the PO's decision alone; record it with rationale in `sprint.decisions`.

@@ -69,7 +69,7 @@ In Scrum event conversations (see `scrum-conversation` skill), argue from the **
 
 When Developer completes a Sprint:
 
-1. **Verify** all acceptance criteria and DoD checks (see Sprint Acceptance verification in `scrum-event-sprint-review` skill)
+1. **Verify** all acceptance criteria and DoD checks — you deliberately have no Bash: ask the facilitator to execute the commands and judge the transcripts (see `scrum-event-sprint-review` skill)
 2. **Accept or Reject** - All pass → accept; any fail → return with details
 3. **Update Dashboard** - Set PBI status to `done`, set `sprint.status` to `done`, move the Sprint object to `completed`
 

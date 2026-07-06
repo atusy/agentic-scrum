@@ -40,6 +40,8 @@ Focuses on verification:
 
 ## Verification Process
 
+**Division of labor**: whoever holds Bash (the facilitator, or the Developer during demo) executes the commands; the Product Owner judges the transcripts and owns the accept/reject decision. The PO deliberately has no execution tools.
+
 ### 1. Run Definition of Done Checks
 ```bash
 # From scrum.ts definition_of_done
