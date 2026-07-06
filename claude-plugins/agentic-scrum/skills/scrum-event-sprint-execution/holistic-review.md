@@ -31,14 +31,14 @@ The Holistic Review provides the "step back" moment to see the forest, not just 
 
 ## Multi-Perspective Review
 
-1. Ask subagents to perform strict multi-perspective reviews **in parallel** (e.g. correctness, security, API design, test quality)
+1. Ask subagents to perform strict multi-perspective reviews **in parallel** (e.g. correctness, security, API design, test quality). If you cannot spawn subagents (you are a subagent yourself), work through the perspectives sequentially yourself, one at a time with fresh eyes
 2. Fact-check the review findings against actual code — subagent findings are hypotheses, not verdicts
 3. Adapt based on verified issues
 4. Repeat until a review round surfaces no new verified issues (minimum 3 rounds)
 
 ## Comprehensive Refactoring
 
-1. Ask subagents to identify refactoring opportunities
+1. Ask subagents to identify refactoring opportunities (same inline fallback: no subagents available → do each pass yourself)
 2. Fact-check proposed refactorings for validity
 3. Apply refactorings using refactoring-related skills:
    - Extract common patterns that emerged across subtasks
