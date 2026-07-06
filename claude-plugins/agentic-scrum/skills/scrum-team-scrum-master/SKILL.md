@@ -26,7 +26,7 @@ No Daily Scrum in AI-Agentic Scrum (agents work continuously).
 ### Serving the Team
 - Coach on self-management
 - Triage blockers: agent-solvable ones get done, human-only ones become impediments (see Impediment Triage)
-- Ensure events are positive, productive, timeboxed
+- Ensure events converge (no timeboxes here — the failure mode is endless rounds, so enforce the max-3-rounds rule)
 
 ### Serving the Product Owner
 - Help with Product Goal definition and backlog management
@@ -63,7 +63,8 @@ Events run as team conversations facilitated by you in the main conversation (se
 When recording, `request` must state **exactly what the human should do or decide** — the impediment list is a structured handoff, not a complaint log. Attempted workarounds go in `notes`. Set `status: resolved` with the outcome once the human responds.
 
 `waiting_human` impediments blocking the Sprint Goal are a stop condition for the sprint loop: surface them to the user instead of working around them silently.
-5. **Prevention**: Add systemic issues to Retrospective
+
+**Prevention**: recurring impediment classes are systemic — bring them to the Retrospective (e.g. strengthen Definition of Ready so credential needs surface during refinement, not mid-sprint).
 
 ## Dashboard Compaction
 
@@ -86,13 +87,15 @@ git show <commit>:scrum.ts
 
 ## Value Violation Intervention
 
-| Value | Violation | Intervention |
-|-------|-----------|--------------|
-| **Commitment** | Unrealistic goals | Coach sustainable pace |
-| **Focus** | WIP exceeds capacity | Finish before starting |
-| **Openness** | Hidden issues | Create safety for early surfacing |
-| **Respect** | Blame culture | Focus on systems, not people |
-| **Courage** | Fear of pushback | Coach professional boundaries |
+Scrum values, translated to failure modes AI agents actually exhibit:
+
+| Value | Agentic Violation | Intervention |
+|-------|-------------------|--------------|
+| **Commitment** | Marking subtasks `completed` with failing tests or unmet DoD | Re-open the subtask; commits at GREEN only |
+| **Focus** | Scope creep: "while I'm here" changes beyond the Sprint Goal | Strip to the Sprint Goal; park extras as `draft` PBIs |
+| **Openness** | Silently working around blockers, or omitting failures from reports | Record impediments and decisions in the dashboard; report outcomes faithfully |
+| **Respect** | Overriding another role's authority (e.g. facilitator deciding acceptance) | Return the decision to its owner |
+| **Courage** | Reflexive `AGREE` to converge quickly instead of an honest `OBJECT` | Require verdicts argued from the role's own incentive |
 
 ## Definition of Done Evolution
 
@@ -101,7 +104,7 @@ Strengthen DoD when:
 - Retrospective identifies gaps
 - Team capabilities improve
 
-Process: Identify gap → Propose addition → Discuss velocity impact → Apply from next Sprint
+Process: Identify gap → Propose addition → Weigh verification cost (every future sprint runs these checks) → Apply from next Sprint
 
 ## Sprint Cancellation
 
@@ -111,7 +114,6 @@ Never cancel to hide problems or because "we're behind."
 
 ## Communication
 
-- Reference Scrum Guide when explaining decisions
 - Use precise Scrum terminology
 - Summarize decisions and action items at event conclusions
-- Fetch https://scrumguides.org/scrum-guide.html when team questions practices
+- When practices are questioned, this plugin's agentic adaptations win over the Scrum Guide — the deviations (no timeboxes, no Daily Scrum, 1 Sprint = 1 PBI, human-only impediments) are deliberate. Consult https://scrumguides.org/scrum-guide.html only for the underlying principles
