@@ -14,8 +14,8 @@ description: Execute Scrum process steps in sequence
 
 Repeat while refinable or `ready` PBIs remain:
 
-1. **Backlog Refinement** — run `/agentic-scrum:event:backlog-refinement` as a team conversation
-2. **Sprint Planning** — run `/agentic-scrum:event:sprint-planning` as a team conversation
+1. **Backlog Refinement** — run `/agentic-scrum:event:backlog-refinement` as a team conversation. If no `ready` PBI results (all remaining items are stuck in `refining` awaiting human input), apply the Stop Conditions instead of continuing.
+2. **Sprint Planning** — run `/agentic-scrum:event:sprint-planning` as a team conversation (selects the top `ready` PBI)
 3. **Sprint Execution** — delegate to `@agentic-scrum:scrum:events:scrum-event-sprint-execution` (fresh subagent per sprint keeps heavy implementation out of the facilitator's context); when it surfaces scope questions, relay them to the PO teammate
 4. **Sprint Review** — run `/agentic-scrum:event:sprint-review` as a team conversation, then branch on the outcome:
    - **Accepted** (`scrum.sprint` cleared, sprint `done`) → continue to Retrospective
