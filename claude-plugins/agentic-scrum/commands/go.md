@@ -17,7 +17,10 @@ Repeat while refinable or `ready` PBIs remain:
 1. **Backlog Refinement** — run `/agentic-scrum:event:backlog-refinement` as a team conversation
 2. **Sprint Planning** — run `/agentic-scrum:event:sprint-planning` as a team conversation
 3. **Sprint Execution** — delegate to `@agentic-scrum:scrum:events:scrum-event-sprint-execution` (fresh subagent per sprint keeps heavy implementation out of the facilitator's context); when it surfaces scope questions, relay them to the PO teammate
-4. **Sprint Review** — run `/agentic-scrum:event:sprint-review` as a team conversation
+4. **Sprint Review** — run `/agentic-scrum:event:sprint-review` as a team conversation, then branch on the outcome:
+   - **Accepted** (`scrum.sprint` cleared, sprint `done`) → continue to Retrospective
+   - **Minor fix** (Review set the sprint back to `in_progress` and added fix subtasks) → return to step 3 (Execution) and re-run Review; do **not** advance to Retrospective yet
+   - **Cancelled** (`scrum.sprint` cleared, sprint `cancelled`) → continue to Retrospective to analyze the root cause
 5. **Sprint Retrospective** — run `/agentic-scrum:event:sprint-retrospective` as a team conversation
 6. **Bookkeeping** (Scrum Master):
    1. compact `scrum.ts` (keep ≤300 lines) and commit any dashboard changes
