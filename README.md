@@ -29,7 +29,7 @@ Optional dependencies: deno
 
 Stable autonomous software development requires a structured process:
 
-* 🧩 **Incremental decomposition** — Break problems down vertically (end-to-end slices) then horizontally (layers) for reliable resolution
+* 🧩 **Incremental decomposition** — Split the backlog into vertical, end-to-end slices (PBIs that each deliver value); break each slice into TDD subtasks *within* the sprint (never split PBIs by technical layer)
 * 🔍 **Continuous quality inspection** — Verify completed functionality meets standards
 * 🔄 **Adaptive prompting** — Evolve instructions based on what works
 
