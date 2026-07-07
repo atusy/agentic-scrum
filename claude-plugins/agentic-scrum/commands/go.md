@@ -12,7 +12,7 @@ description: Execute Scrum process steps in sequence
 
 ## Sprint Loop
 
-Repeat while refinable or `ready` PBIs remain:
+Repeat while any PBI is `ready`, or is `draft`/`refining` and can still progress without human input:
 
 1. **Backlog Refinement** — run `/agentic-scrum:event:backlog-refinement` as a team conversation. If no `ready` PBI results (all remaining items are stuck in `refining` awaiting human input), apply the Stop Conditions instead of continuing.
 2. **Sprint Planning** — run `/agentic-scrum:event:sprint-planning` as a team conversation (selects the top `ready` PBI)
