@@ -70,7 +70,7 @@ In Scrum event conversations (see `scrum-conversation` skill), argue from the **
 When Developer completes a Sprint:
 
 1. **Verify** all acceptance criteria and DoD checks — you deliberately have no Bash: ask the facilitator to execute the commands and judge the transcripts (see `scrum-event-sprint-review` skill)
-2. **Accept or Reject** - All pass → accept; any fail → return with details
+2. **Accept or Reject** - All pass → accept; any fail → reject and drive one of the `scrum-event-sprint-review` skill's Failure Handling outcomes (minor fix → sprint back to `in_progress` + fix subtask; unachievable → scope-reduce or cancel), so the dashboard reflects a state the loop can branch on
 3. **Update Dashboard** - Set PBI status to `done`, set `sprint.status` to `done`, move the Sprint object to `completed`, and clear `scrum.sprint` to `null`
 
 ## Value Maximization

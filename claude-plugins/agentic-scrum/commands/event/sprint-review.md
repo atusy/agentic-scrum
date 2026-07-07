@@ -15,7 +15,11 @@ Run as a facilitated conversation (`scrum-conversation` skill):
 * **PO inspects**: probes the demo and transcripts from the user's perspective, then decides `AGREE` (accept) or `OBJECT` (reject with specifics)
 * **Both adapt**: feedback that is out of scope becomes new `draft` PBIs, never scope creep in this sprint
 
-Acceptance is the PO's decision alone; the PO records it with rationale in `sprint.decisions` and updates the dashboard (PBI → `done`, sprint → `done`, Sprint object → `completed`, `scrum.sprint` → `null`).
+Acceptance is the PO's decision alone; the PO records the rationale in `sprint.decisions`. The outcome must leave the dashboard in one of the states the `/agentic-scrum:go` loop branches on — apply the `scrum-event-sprint-review` skill's Failure Handling:
+
+- **AGREE (accept)**: PBI → `done`, sprint → `done`, Sprint object → `completed`, `scrum.sprint` → `null`
+- **OBJECT, minor fix**: set sprint back to `in_progress`, add fix subtask(s) — execution re-runs, then Review again
+- **OBJECT, Sprint Goal unachievable**: scope-reduce, or cancel (sprint → `cancelled`, archive, `scrum.sprint` → `null`, PBI → `refining`)
 
 # Skills
 
