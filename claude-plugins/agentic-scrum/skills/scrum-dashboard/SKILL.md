@@ -12,6 +12,11 @@ description: Maintain scrum.ts dashboard following Agentic Scrum principles. Use
 | **Order is Priority** | Higher in `product_backlog` array = higher priority |
 | **Schema is Fixed** | Only edit the data section; request human review for type changes |
 
+## Editing Rules
+
+- **`scrum.ts` is TypeScript, not YAML.** Some skills show snippets in YAML for readability; translate them to TypeScript object syntax (quoted strings, `[]` arrays) when writing the file.
+- **Register user-story roles first.** `story.role` is typed against the `userStoryRoles` tuple at the top of the file. Before writing (or refining) a PBI whose role is not already listed, add that role string to `userStoryRoles` — otherwise `deno check` fails with a `never`-type error. Prune obsolete roles freely.
+
 ## Validation
 
 ```bash

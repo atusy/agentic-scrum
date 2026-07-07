@@ -2,6 +2,8 @@
 
 Format: **"As a [role], I want [capability], so that [benefit]"**
 
+> **Schema note**: `role` is typed against the `userStoryRoles` tuple at the top of `scrum.ts`. Add a new role to that tuple before using it in a PBI, or `deno check` fails. See the `scrum-dashboard` skill's Editing Rules.
+
 ## Follow Ron Jeffries' 3C Principle
 
 - **Card**: Story captured briefly (AI-Agentic: User Story in `scrum.ts`)

@@ -42,6 +42,7 @@ Then interview the user with the **AskUserQuestion tool** (batches of up to 4 qu
      - What capability do they need?
      - What benefit does it provide?
    - These become the initial Product Backlog Items
+   - **Add every distinct role to the `userStoryRoles` tuple at the top of `scrum.ts`** before writing these PBIs, or `deno check` fails (see the `scrum-dashboard` skill's Editing Rules)
 
 5. **Success Metrics** (optional): How will you measure product success?
    - Default metrics will be provided if none specified
