@@ -66,7 +66,7 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 
 ### INVEST Principles (AI-Agentic)
 
-| Principle | AI-Agentic Interpretation | 
+| Principle | AI-Agentic Interpretation |
 |-----------|---------------------------|
 | **Independent** | Can wire the output as outcome. Can reprioritize freely because no PBIs depend on each other |
 | **Negotiable** | Can be rewritten or even discarded even if PBI is ready |
