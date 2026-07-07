@@ -96,7 +96,7 @@ Scrum events run as **facilitated conversations between role agents**, not a che
 
 ```
 PBI:      draft → refining → ready → done
-Sprint:   planning → in_progress → review → done | cancelled
+Sprint:   planning → in_progress → review → done  (or → cancelled)
 Subtask:  pending → 🔴 red → 🟢 green → 🔧 refactoring → ✅ completed
                      │        │              │
                   (test)  (commit)      (commit×N)
