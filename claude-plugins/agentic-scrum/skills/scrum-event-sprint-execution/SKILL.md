@@ -29,6 +29,8 @@ Execute the next `pending` subtask using `scrum-team-developer` skill with the `
 /tdd:refactor → Improve code, commit per step, update status to `refactoring`
 ```
 
+**Structural subtasks** (`type: structural`) have no behavior to test: skip `red`/`green` and go straight to `refactoring`, applying the change as behavior-preserving steps.
+
 Mark subtask `completed` when done.
 
 ### 2. Inspect & Adapt (Daily Scrum)
