@@ -55,7 +55,9 @@ sprint: {
   number: 2,
   pbi_id: "PBI-007",
   goal: "Mobile shoppers can complete checkout",
-  status: "in_progress", // starts as "planning" while the plan forms, flips to "in_progress" once agreed
+  // create the Sprint with status "planning"; this example shows it after step 5,
+  // once the plan is agreed and the status has flipped to "in_progress"
+  status: "in_progress",
   subtasks: [
     {
       test: "What behavior to verify (RED phase)",
