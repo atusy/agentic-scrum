@@ -24,7 +24,7 @@ Repeat while refinable or `ready` PBIs remain:
 5. **Sprint Retrospective** — run `/agentic-scrum:event:sprint-retrospective` as a team conversation
 6. **Bookkeeping** (Scrum Master):
    1. compact `scrum.ts` (keep ≤300 lines) and commit any dashboard changes
-   2. `git commit --allow-empty -m "chore(scrum): completed sprint-<number>"` where `<number>` is the sprint just completed
+   2. `git commit --allow-empty -m "chore(scrum): closed sprint-<number> (<status>)"` where `<number>` is the sprint just closed and `<status>` is `done` or `cancelled`
    3. `git tag "sprint-<number>-$(git rev-parse --short HEAD)"`
 
 ## Stop Conditions
