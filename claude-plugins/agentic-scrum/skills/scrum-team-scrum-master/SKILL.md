@@ -38,7 +38,7 @@ Scrum events run as conversations between role agents — use the `scrum-convers
 
 - Assemble a persistent team (PO, Dev) once per session via the Agent tool; continue them with SendMessage
 - Pose one focused question per turn; require verdict lines (`PROPOSE`/`AGREE`/`OBJECT`/`NEED`)
-- Enforce convergence (max 3 rounds per topic, disagree-and-commit) and record decisions with dissent in `sprint.decisions`
+- Enforce convergence (max 3 rounds per topic, disagree-and-commit) and record decisions with dissent in `sprint.decisions` (or, during Refinement when there is no active sprint, in the PBI's `notes`)
 - Never override the PO on value or the Developer on implementation; you break process deadlocks only
 
 ## Event Coordination
