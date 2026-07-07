@@ -16,10 +16,11 @@ Simplified because:
 
 ## Core Steps
 
-1. **Select PBI**: Choose the top `ready` item from Product Backlog
-2. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
-3. **Break into Subtasks**: Each subtask = one TDD cycle
-4. **Start the Sprint**: Set `sprint.status` to `in_progress` (Sprint Review may also set it back to `in_progress` when returning a sprint for minor fixes)
+1. **Open the Sprint**: Create the `Sprint` object with `status: "planning"` — it holds the goal and subtasks as they take shape during this conversation
+2. **Select PBI**: Choose the top `ready` item from Product Backlog
+3. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
+4. **Break into Subtasks**: Each subtask = one TDD cycle
+5. **Start the Sprint**: Once the plan is agreed, set `sprint.status` to `in_progress` (Sprint Review may also set it back to `in_progress` when returning a sprint for minor fixes)
 
 ## Readiness Verification
 
@@ -54,7 +55,7 @@ sprint: {
   number: 2,
   pbi_id: "PBI-007",
   goal: "Mobile shoppers can complete checkout",
-  status: "in_progress", // planning sets this when the plan is agreed
+  status: "in_progress", // starts as "planning" while the plan forms, flips to "in_progress" once agreed
   subtasks: [
     {
       test: "What behavior to verify (RED phase)",
