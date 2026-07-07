@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read, Write, Bash(cat:*), Bash(ls:*), Bash(deno:*)
+allowed-tools: Read, Write, AskUserQuestion, Bash(cat:*), Bash(ls:*), Bash(deno:*), Bash(jq:*), Bash(git:*)
 description: Initialize a scrum.ts file based on AI-Agentic Scrum Dashboard template
 ---
 
@@ -15,11 +15,14 @@ By just copying the `scrum.template.ts` file from the `scrum-dashboard` skill di
 
 ### Step 1: Gather Project Information
 
-Ask the user the following questions interactively. For existing projects, scan config files (e.g., `package.json`, `pyproject.toml`) first and offer detected values as defaults. Update `scrum.ts` according to the answers.
+For existing projects, scan config files (e.g., `package.json`, `pyproject.toml`, `deno.json`, `Cargo.toml`, `go.mod`) and the README first to derive defaults.
+
+Then interview the user with the **AskUserQuestion tool** (batches of up to 4 questions). Offer detected values as the recommended first option; the built-in "Other" choice captures free-text answers. Fall back to plain-text questions only if the tool is unavailable. Update `scrum.ts` according to the answers.
 
 **Required Information:**
 
 1. **Product Name**: What is the name of this product/project?
+   - The schema has no `product_name` field — do NOT add one (it would fail `deno check`). Use the name only for context and commit messages; weave it into the Product Goal statement if useful.
 
 2. **Product Goal**: What is the core user value this product delivers?
    - Example: "Enable developers to write tests more efficiently"
@@ -39,6 +42,7 @@ Ask the user the following questions interactively. For existing projects, scan 
      - What capability do they need?
      - What benefit does it provide?
    - These become the initial Product Backlog Items
+   - **Add every distinct role to the `userStoryRoles` tuple at the top of `scrum.ts`** before writing these PBIs, or `deno check` fails (see the `scrum-dashboard` skill's Editing Rules)
 
 5. **Success Metrics** (optional): How will you measure product success?
    - Default metrics will be provided if none specified
@@ -66,7 +70,7 @@ After creating the file:
 
 3. **Explain next steps**:
    - Review and refine the initial PBIs
-   - Change status from `draft` to `ready` when stories are complete
+   - Backlog Refinement moves stories `draft` → `refining` → `ready` once they pass the Definition of Ready
    - Run Sprint Planning to start the first sprint
 
 4. **Mention the core principles**:
@@ -93,4 +97,4 @@ Unless `scrum.ts` is gitignored.
 
 ---
 
-**Begin by asking the user the required questions one section at a time.**
+**Begin by scanning the project for defaults, then interview the user one section at a time.**

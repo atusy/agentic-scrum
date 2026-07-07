@@ -68,10 +68,10 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 
 | Principle | AI-Agentic Interpretation |
 |-----------|---------------------------|
-| **Independent** | Can reprioritize freely, **AND** no human dependencies |
-| **Negotiable** | Clear outcome, flexible implementation |
+| **Independent** | Can wire the output as outcome. Can reprioritize freely because no PBIs depend on each other |
+| **Negotiable** | Can be rewritten or even discarded even if PBI is ready |
 | **Valuable** | Can deliver increment specified as observable, user-facing benefit in User Story (see `increment.md`) |
-| **Estimable** | All information needed is available |
+| **Estimable** | Can estimate if PBI can be accomplished only by AI |
 | **Small** | Smallest unit delivering user value |
 | **Testable** | Has **executable verification commands** |
 
@@ -91,7 +91,7 @@ Even `ready` PBIs must pass **Adaptation Check for Ready PBIs** in addition to t
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Product Goal alignment, value prioritization
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Technical feasibility, effort estimation
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Definition of Ready enforcement
+- **Scrum Master** (the facilitator — not spawned): Definition of Ready enforcement
 
 ## Reference Documents
 

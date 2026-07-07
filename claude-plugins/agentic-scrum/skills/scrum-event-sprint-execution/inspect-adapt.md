@@ -35,20 +35,27 @@ After each subtask, pause and reflect. Don't rush to the next subtask. The few m
 
 ## When to Adapt
 
+> The snippets below use YAML for readability. `scrum.ts` is TypeScript — translate to object syntax (quoted strings, `[]` arrays) when writing, per the `scrum-dashboard` skill's Editing Rules.
+
 ### Add Subtasks
 
 ```yaml
+# New subtasks need all required fields (commits/notes) or deno check fails
 # Discovered edge case during implementation
 - test: "Handle empty input gracefully"
   implementation: "Add early return for empty collections"
   type: behavioral
   status: pending
+  commits: []
+  notes: []
 
 # Found prerequisite refactoring needed
 - test: "N/A (structural)"
   implementation: "Extract validation logic before adding new validators"
   type: structural
   status: pending
+  commits: []
+  notes: []
 ```
 
 ### Modify Subtasks
@@ -109,27 +116,29 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 - Gold-plating beyond what's needed
 - Work that belongs to a different PBI
 
-**When in doubt**: Consult @agentic-scrum:scrum:team:scrum-team-product-owner before adapting.
+**When in doubt**: Stop and return the scope question in your report; the orchestrator consults the Product Owner and re-delegates. Do not adapt speculatively.
 
 ## Impediment Reporting
 
-If you encounter blockers during inspection, report them immediately:
+**An impediment is a blocker only a human can resolve.** Triage first:
+
+- You can fix it (missing dependency, broken test, environment quirk) → just work; fix it and move on
+- Requirements are ambiguous or scope grew → return the question in your report to the orchestrator (who consults the Product Owner), or return the PBI to `refining`
+- Only a human can act (credentials, external accounts, irreversible decisions, denied permissions) → record it:
 
 ```yaml
-# Add to scrum.ts sprint.impediments
+# Shape of a sprint.impediments entry (write it as TypeScript in scrum.ts)
 impediments:
-  - description: "External API returns unexpected format"
-    impact: "Cannot complete data import subtask"
-    reported_at_subtask: "Implement API data fetching"
-    resolution_attempts: ["Checked API docs", "Tested with curl"]
+  - description: "Deploy step requires production AWS credentials"
+    impact: "Cannot verify the acceptance criterion that exercises the live endpoint"
+    request: "Provide read-only AWS credentials, or approve verifying against staging instead"
+    status: waiting_human
+    notes:
+      - "Found at subtask: Verify deployed endpoint"
+      - "Tried localstack; behavior differs for IAM"
 ```
 
-Notify @agentic-scrum:scrum:team:scrum-team-scrum-master for impediment removal.
-
-**Types of impediments:**
-- Technical blockers (missing dependencies, API issues, environment problems)
-- Unclear requirements (ambiguous acceptance criteria)
-- Scope questions (discovered complexity beyond original estimate)
+Surface it in your report to the orchestrator; a `waiting_human` impediment that blocks the Sprint Goal stops the loop rather than being silently worked around.
 
 ## Recording Adaptations
 

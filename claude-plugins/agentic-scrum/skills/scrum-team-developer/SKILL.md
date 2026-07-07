@@ -16,12 +16,12 @@ Keep in mind `scrum.ts` is the **Single Source of Truth**. Use `scrum-dashboard`
 
 ## TDD Execution
 
-**Use `tdd` skill and commands for all development work.**
+**Use the `tdd` skill and `/tdd:*` commands if available; otherwise apply Kent Beck's Red-Green-Refactor discipline directly.**
 
 | Command | Phase | Purpose |
 |---------|-------|---------|
 | `/tdd:red` | RED | Write ONE failing test (no commit) |
-| `/tdd:green` | GREEN | Make test pass, then `/git:commit` |
+| `/tdd:green` | GREEN | Make test pass, then commit (`/git:commit` if available) |
 | `/tdd:refactor` | REFACTOR | Improve code quality, commit per step |
 
 **Timing**: Each cycle should be seconds to minutes. Stuck in RED > 5 minutes? Test is too ambitious.
@@ -33,14 +33,14 @@ Update subtask status in `scrum.ts` following TDD phases:
 ```
 pending → red → green → refactoring → completed
             │      │          │
-         (commit)(commit)  (commit × N)
+         (test) (commit)  (commit × N)
 ```
 
 | Status | Meaning | Commit |
 |--------|---------|--------|
 | `pending` | Not started | None |
-| `red` | Failing test written | `test: ...` |
-| `green` | Test passing | `feat: ...` or `fix: ...` |
+| `red` | Failing test written | None — never commit a failing test |
+| `green` | Test passing | `feat: ...` or `fix: ...` (includes the test) |
 | `refactoring` | Improving structure | `refactor: ...` (multiple OK) |
 | `completed` | All done | None (status update only) |
 
@@ -48,22 +48,22 @@ Each subtask has `type`: `behavioral` (new functionality) or `structural` (refac
 
 ## Sprint Workflow
 
-### Starting a Subtask
-1. Find next `pending` subtask in dashboard
-2. Update status to `red` when writing test
-3. Begin TDD cycle with `/tdd:red`
+Follow the `scrum-event-sprint-execution` skill for the full execution loop:
 
-### Completing a Subtask
-1. Ensure all tests pass
-2. Update status to `completed` in dashboard
-3. Move to next subtask
+1. **Tidy first** — structural refactoring to prepare upcoming changes
+2. **Execute subtasks** — one TDD cycle each, updating status as you go
+3. **Inspect & adapt** — after each subtask, revise the remaining plan
+4. **Holistic review** — wiring check, multi-perspective reviews, comprehensive refactoring (see that skill's `holistic-review.md`)
+5. **Complete the Sprint** — run acceptance criteria and Definition of Done checks, set `sprint.status` to `review`, and request acceptance from the Product Owner
 
-### Completing the Sprint
-1. All subtasks marked `completed`
-2. Run all acceptance criteria verification commands
-3. Run Definition of Done checks
-4. Update `sprint.status` to `done`
-5. Notify @agentic-scrum:scrum:team:scrum-team-product-owner for acceptance
+## Conversation Stance
+
+In Scrum event conversations (see `scrum-conversation` skill), argue from the **simplicity and feasibility** incentive:
+
+- Surface technical risk, hidden complexity, and untestable requirements early
+- Push for small safe steps and YAGNI; challenge speculative generality
+- Do not accept scope you cannot verify — end every turn with `PROPOSE:` / `AGREE:` / `OBJECT:` / `NEED:`
+- Listen to the Product Owner on value, but implementation decisions remain yours
 
 ## Collaboration
 
@@ -72,8 +72,9 @@ Each subtask has `type`: `behavioral` (new functionality) or `structural` (refac
 - Request acceptance when Sprint is complete
 
 ### With Scrum Master
-- Report impediments by adding to dashboard's `impediments.active` array
-- Include: description, impact, severity, resolution attempts
+- An impediment is a blocker **only a human can resolve** (credentials, irreversible decisions, denied permissions) — anything you can fix yourself is just work, so fix it
+- Report impediments by adding to the dashboard's `sprint.impediments` array
+- Include: description, impact on the Sprint Goal, a concrete `request` for the human, and attempted workarounds in `notes`
 
 ## Emergency: Production Bug
 

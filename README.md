@@ -21,15 +21,15 @@ Optional dependencies: deno
     ```
     /plugin install agentic-scrum@agentic-scrum
     ```
-2. Run `/scrum:init` in your project to create `scrum.ts`
+2. Run `/agentic-scrum:init` in your project to create `scrum.ts`
 3. Prompt Claude Code to add a TODO in `scrum.ts` (i.e., PBI)
-4. Run `/scrum:go` to start autonomous development
+4. Run `/agentic-scrum:go` to start autonomous development
 
 ## 💡 Why Agentic Scrum?
 
 Stable autonomous software development requires a structured process:
 
-* 🧩 **Incremental decomposition** — Break problems down vertically (end-to-end slices) then horizontally (layers) for reliable resolution
+* 🧩 **Incremental decomposition** — Split the backlog into vertical, end-to-end slices (PBIs that each deliver value); break each slice into TDD subtasks *within* the sprint (never split PBIs by technical layer)
 * 🔍 **Continuous quality inspection** — Verify completed functionality meets standards
 * 🔄 **Adaptive prompting** — Evolve instructions based on what works
 
@@ -43,7 +43,7 @@ Scrum provides exactly this structure, and AI agents understand it well.
 |-------------------|---------------|
 | 📅 Sprint = 2-4 weeks | ⚡ Sprint = 1 PBI (any duration) |
 | 📊 Velocity planning | 🚫 No estimation needed |
-| 👥 Team ceremonies | 🤖 Autonomous coordination |
+| 👥 Team ceremonies | 🗣️ Agent-to-agent conversations |
 | 📋 Sprint backlog items | 🎯 Single focused goal |
 
 The result: **continuous autonomous iteration** with all the benefits of Scrum's inspect-and-adapt loop.
@@ -84,11 +84,19 @@ const scrum: ScrumDashboard = {
 └───────────────────┘                 └───────────────────────┘
 ```
 
+### 🗣️ Events are Conversations
+
+Scrum events run as **facilitated conversations between role agents**, not a checklist executed by one agent wearing every hat:
+
+- The **Scrum Master** (main conversation) facilitates; **PO** and **Developer** are persistent agents that keep their context across events — the PO remembers *why* the backlog is ordered, the Developer remembers what it learned in the code
+- Each role argues from its own incentive (PO: value, Dev: simplicity) and ends every turn with a verdict line: `PROPOSE:` / `AGREE:` / `OBJECT:` / `NEED:`
+- Max 3 rounds per topic, then disagree-and-commit — with the dissent recorded in `scrum.ts` (`sprint.decisions`)
+
 ### 🔄 Status Lifecycles
 
 ```
 PBI:      draft → refining → ready → done
-Sprint:   planning → in_progress → review → done
+Sprint:   planning → in_progress → review → done  (or → cancelled)
 Subtask:  pending → 🔴 red → 🟢 green → 🔧 refactoring → ✅ completed
                      │        │              │
                   (test)  (commit)      (commit×N)

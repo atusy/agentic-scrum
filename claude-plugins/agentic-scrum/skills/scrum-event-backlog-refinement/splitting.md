@@ -73,13 +73,13 @@ After:
   - Results update in real-time as user types
 ```
 
-### 7. Spike + Implementation
-Split technical investigation from feature implementation.
+### 7. Spike Before Implementation
+Reduce uncertainty before committing to a PBI — but a spike is **not a standalone PBI**: investigation alone delivers no Increment (see `increment.md`), so Sprint Review could never accept it. Do the spike as a refinement activity (explore the codebase/API now) or as the first subtask inside the value-delivering PBI.
 ```
-Before: User can book using external payment API
+Before: User can book using external payment API (integration approach unknown)
 After:
-  - [Spike] Investigate payment API integration options
-  - User can book using payment API
+  - Investigate the payment API during refinement (or as subtask 1)
+  - PBI stays: "User can book using payment API"
 ```
 
 ## Anti-Patterns (Merge These)

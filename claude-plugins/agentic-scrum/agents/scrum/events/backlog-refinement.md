@@ -4,6 +4,4 @@ description: Transform PBIs into ready status for AI execution. Use when refinin
 tools: Bash, Glob, Grep, Read, Write, Edit, MultiEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell
 ---
 
-As Product Owner following `scrum-team-product-owner` skill, do backlog refinement by using `scrum-event-backlog-refinement` skill, so that PBIs become ready for sprint planning.
-
-Use `scrum-dashboard` skill for dashboard maintenance guidance.
+Run the `/agentic-scrum:event:backlog-refinement` command. If you cannot invoke the command, do the same work by using the `scrum-conversation` (inline role-play fallback), `scrum-team-scrum-master`, `scrum-event-backlog-refinement`, and `scrum-dashboard` skills.

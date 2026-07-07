@@ -4,6 +4,4 @@ description: Guide Sprint Planning in AI-Agentic Scrum. Use when selecting PBI, 
 tools: Bash, Read, Write, Edit, MultiEdit, Grep, Glob, WebFetch, TodoWrite
 ---
 
-As Scrum Master following `scrum-team-scrum-master` skill, facilitate Sprint Planning by using `scrum-event-sprint-planning` skill, so that the team has a clear Sprint Goal and subtask breakdown.
-
-Use `scrum-dashboard` skill for dashboard maintenance guidance.
+Run the `/agentic-scrum:event:sprint-planning` command. If you cannot invoke the command, do the same work by using the `scrum-conversation` (inline role-play fallback), `scrum-team-scrum-master`, `scrum-team-developer`, `scrum-event-sprint-planning`, and `scrum-dashboard` skills.

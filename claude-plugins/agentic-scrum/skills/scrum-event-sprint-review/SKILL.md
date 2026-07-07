@@ -16,6 +16,8 @@ Focuses on verification:
 
 ## Core Philosophy
 
+**"Stakeholder" here means the human user of this plugin** — reachable asynchronously via the dashboard and loop stop conditions, not present in the event.
+
 **Sprint Review is NOT just a demo!**
 - **Transparency**: Show only completed Increments (meeting DoD)
 - **Inspection**: Examine product, gather feedback
@@ -40,6 +42,8 @@ Focuses on verification:
 
 ## Verification Process
 
+**Division of labor**: whoever holds Bash (the facilitator, or the Developer during demo) executes the commands; the Product Owner judges the transcripts and owns the accept/reject decision. The PO deliberately has no execution tools.
+
 ### 1. Run Definition of Done Checks
 ```bash
 # From scrum.ts definition_of_done
@@ -52,20 +56,22 @@ deno check scrum.ts
 Each acceptance criterion has an executable command - run them all.
 
 ### 3. Determine Acceptance
-- **All pass** → Move PBI to `completed`
+- **All pass** → the Product Owner records acceptance in the dashboard: set PBI status to `done`, set `sprint.status` to `done`, move the Sprint object into the `completed` array, and clear `scrum.sprint` to `null` (the next Planning creates a fresh Sprint)
 - **Any fail** → Return with details
 
 ## Failure Handling
 
 ### Minor Fix Possible
 ```yaml
-# Keep sprint.status = "in_progress"
-# Add fix subtask:
+# Set sprint.status back to "in_progress" while fixing
+# Add fix subtask (commits/notes are required by the schema — initialize them):
 subtasks:
   - test: "Fix [specific issue]"
     implementation: "Resolve the failure"
     type: behavioral
     status: pending
+    commits: []
+    notes: []
 # Re-run Review after fix
 ```
 
@@ -73,7 +79,7 @@ subtasks:
 1. Report to Product Owner
 2. Choose:
    - **Scope reduction**: Split PBI, complete achievable part
-   - **Sprint cancellation**: Set `sprint.status = "cancelled"`, return PBI
+   - **Sprint cancellation** (Product Owner only): set `sprint.status = "cancelled"`, then do the same bookkeeping as acceptance except the PBI is not done — move the Sprint object to `completed` (as a cancelled record), clear `scrum.sprint` to `null`, and return the PBI to `refining` (re-refine before it is picked again). Record why in the Sprint's `decisions`.
 3. Always run Retrospective to analyze root cause
 
 ## No-Increment Situations
@@ -81,22 +87,21 @@ subtasks:
 Sprint Review STILL happens:
 - Acknowledge openly no Increment met DoD
 - Discuss why items weren't completed
-- Continue with environmental updates
-- Gather stakeholder input on priorities
+- Record questions for the human user (impediments or PBI `notes`) instead of assuming their priorities
 - Assess Product Goal impact
 
 ## Product Goal Progress
 
 Guide discussion around:
 - How does this Sprint contribute to Product Goal?
-- Is Product Goal still achievable at current pace?
+- Is the Product Goal still achievable, or is something systematically blocking progress?
 - What is planned next toward the Goal?
 
 ## Collaboration
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: PBI completion status, acceptance decision
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Demo preparation, DoD verification
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, impediment identification
-- **@agentic-scrum:scrum:events:scrum-event-sprint-retrospective**: Outputs Review outcomes for reflection
+- **Scrum Master** (the facilitator — not spawned): Facilitation, impediment identification
+- **Sprint Retrospective** (next event in the loop): consumes Review outcomes for reflection
 
 Sprint Review is a collaborative working session for inspecting the product and adapting based on feedback. Transparency is paramount - show only what is truly complete.

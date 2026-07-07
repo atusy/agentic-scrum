@@ -16,9 +16,11 @@ Simplified because:
 
 ## Core Steps
 
-1. **Select PBI**: Choose the top `ready` item from Product Backlog
-2. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
-3. **Break into Subtasks**: Each subtask = one TDD cycle
+1. **Open the Sprint**: Create the `Sprint` object with `status: "planning"` — it holds the goal and subtasks as they take shape during this conversation
+2. **Select PBI**: Choose the top `ready` item from Product Backlog
+3. **Define Sprint Goal**: Derive from PBI's user story as Agentic Scrum executes 1 PBI per Sprint
+4. **Break into Subtasks**: Each subtask = one TDD cycle
+5. **Start the Sprint**: Once the plan is agreed, set `sprint.status` to `in_progress` (Sprint Review may also set it back to `in_progress` when returning a sprint for minor fixes)
 
 ## Readiness Verification
 
@@ -30,7 +32,7 @@ Simplified because:
 
 Ask:
 - "What do we want to demonstrate at Sprint Review?"
-- "What would make stakeholders excited?"
+- "What would make the human user — the only stakeholder — excited?"
 - "What can we show as a working increment?"
 
 ## Subtask Guidelines
@@ -44,18 +46,31 @@ Ask:
 - Update status immediately when completing
 - Mark `type`: `behavioral` or `structural`
 
-### Subtask Format
+### Sprint Format
 
-Each subtask in `scrum.ts` should follow TDD structure:
+Planning writes a complete `Sprint` object to `scrum.ts` — all fields are required, so initialize the empty arrays explicitly or `deno check` fails:
 
-```yaml
-subtasks:
-  - test: "What behavior to verify (RED phase)"
-    implementation: "What to build (GREEN phase)"
-    type: behavioral  # behavioral | structural
-    status: pending   # pending | red | green | refactoring | completed
-    commits: []
-    notes: []
+```typescript
+sprint: {
+  number: 2,
+  pbi_id: "PBI-007",
+  goal: "Mobile shoppers can complete checkout",
+  // create the Sprint with status "planning"; this example shows it after step 5,
+  // once the plan is agreed and the status has flipped to "in_progress"
+  status: "in_progress",
+  subtasks: [
+    {
+      test: "What behavior to verify (RED phase)",
+      implementation: "What to build (GREEN phase)",
+      type: "behavioral", // behavioral | structural
+      status: "pending", // pending | red | green | refactoring | completed
+      commits: [],
+      notes: [],
+    },
+  ],
+  impediments: [], // required — initialize empty
+  decisions: [], // required — record conversation outcomes here
+},
 ```
 
 **Subtask types**:
@@ -100,10 +115,12 @@ subtasks:
 2. **Fake It**: Establish the simplest working implementation (just headers)
 3. **Evolve**: Incrementally add real behavior through successive TDD cycles
 
+(When writing these into `scrum.ts`, include the required `commits: []` and `notes: []` on every subtask — omitted above for readability.)
+
 ## Collaboration
 
 - **@agentic-scrum:scrum:team:scrum-team-product-owner**: Sprint Goal input, Product Backlog prioritization
 - **@agentic-scrum:scrum:team:scrum-team-developer**: Task breakdown, technical feasibility
-- **@agentic-scrum:scrum:team:scrum-team-scrum-master**: Facilitation, impediment removal
+- **Scrum Master** (the facilitator — not spawned): Facilitation, impediment triage
 
 A successful Sprint Planning produces shared understanding of WHY the Sprint matters, WHAT will be delivered, and HOW the team will achieve the Sprint Goal.
