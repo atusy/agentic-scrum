@@ -35,6 +35,8 @@ After each subtask, pause and reflect. Don't rush to the next subtask. The few m
 
 ## When to Adapt
 
+> The snippets below use YAML for readability. `scrum.ts` is TypeScript — translate to object syntax (quoted strings, `[]` arrays) when writing, per the `scrum-dashboard` skill's Editing Rules.
+
 ### Add Subtasks
 
 ```yaml
@@ -125,7 +127,7 @@ Adaptation must serve the Sprint Goal, not expand beyond it.
 - Only a human can act (credentials, external accounts, irreversible decisions, denied permissions) → record it:
 
 ```yaml
-# Add to scrum.ts sprint.impediments
+# Shape of a sprint.impediments entry (write it as TypeScript in scrum.ts)
 impediments:
   - description: "Deploy step requires production AWS credentials"
     impact: "Cannot verify the acceptance criterion that exercises the live endpoint"
