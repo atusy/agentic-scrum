@@ -89,7 +89,7 @@ const scrum: ScrumDashboard = {
 Scrum events run as **facilitated conversations between role agents**, not a checklist executed by one agent wearing every hat:
 
 - The **Scrum Master** (main conversation) facilitates; **PO** and **Developer** are persistent agents that keep their context across events — the PO remembers *why* the backlog is ordered, the Developer remembers what it learned in the code
-- Each role argues from its own incentive (PO: value, Dev: simplicity) and ends every turn with a verdict: `PROPOSE` / `AGREE` / `OBJECT` / `NEED`
+- Each role argues from its own incentive (PO: value, Dev: simplicity) and ends every turn with a verdict line: `PROPOSE:` / `AGREE:` / `OBJECT:` / `NEED:`
 - Max 3 rounds per topic, then disagree-and-commit — with the dissent recorded in `scrum.ts` (`sprint.decisions`)
 
 ### 🔄 Status Lifecycles
