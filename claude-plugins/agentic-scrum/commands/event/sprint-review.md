@@ -15,7 +15,7 @@ Run as a facilitated conversation (`scrum-conversation` skill):
 * **PO inspects**: probes the demo and transcripts from the user's perspective, then decides `AGREE` (accept) or `OBJECT` (reject with specifics)
 * **Both adapt**: feedback that is out of scope becomes new `draft` PBIs, never scope creep in this sprint
 
-Acceptance is the PO's decision alone; the PO records it with rationale in `sprint.decisions` and updates the dashboard (PBI → `done`, sprint → `done`, Sprint object → `completed`).
+Acceptance is the PO's decision alone; the PO records it with rationale in `sprint.decisions` and updates the dashboard (PBI → `done`, sprint → `done`, Sprint object → `completed`, `scrum.sprint` → `null`).
 
 # Skills
 
