@@ -22,6 +22,7 @@ Then interview the user with the **AskUserQuestion tool** (batches of up to 4 qu
 **Required Information:**
 
 1. **Product Name**: What is the name of this product/project?
+   - The schema has no `product_name` field — do NOT add one (it would fail `deno check`). Use the name only for context and commit messages; weave it into the Product Goal statement if useful.
 
 2. **Product Goal**: What is the core user value this product delivers?
    - Example: "Enable developers to write tests more efficiently"
