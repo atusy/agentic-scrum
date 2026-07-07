@@ -56,7 +56,7 @@ deno check scrum.ts
 Each acceptance criterion has an executable command - run them all.
 
 ### 3. Determine Acceptance
-- **All pass** → the Product Owner records acceptance in the dashboard: set PBI status to `done`, set `sprint.status` to `done`, and move the Sprint object to the `completed` array
+- **All pass** → the Product Owner records acceptance in the dashboard: set PBI status to `done`, set `sprint.status` to `done`, move the Sprint object into the `completed` array, and clear `scrum.sprint` to `null` (the next Planning creates a fresh Sprint)
 - **Any fail** → Return with details
 
 ## Failure Handling
